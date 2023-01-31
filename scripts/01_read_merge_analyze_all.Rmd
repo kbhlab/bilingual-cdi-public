@@ -1,0 +1,599 @@
+---
+title: "Read and Merge bilingual CDI Data"
+author: "Krista Byers-Heinlein & Hilary Killam based on script from Esther Schott"
+output: html_notebook
+---
+
+#Prep
+## Load packages
+```{r}
+library(knitr)
+library(tidyverse)
+library(here)
+library(readxl)
+library(lme4)
+library(broom.mixed)
+library(lmerTest)
+library(janitor)
+library(gvlma)
+library(performance)
+library(sjPlot)
+library(tidylog)
+options(scipen = 999)
+
+```
+
+## Read in data
+```{r}
+
+# Words and Sentences dataset- older children
+cdi_ws_dataset <- read_csv(here("data/byers-heinlein_ws_summary_data_en-fr.csv"))
+
+cdi_ws <- cdi_ws_dataset %>% # Create new dataset to work with
+  rename(word_production = word_vocab_production) %>%
+  rename(concept_production = concept_vocab_production) %>%
+  rename(lang_production = lang_vocab_production) %>%
+  mutate(word_comprehension = NA) %>%
+  mutate(concept_comprehension = NA) %>%
+  mutate(te_comprehension = NA) 
+  
+# Words and Gestures dataset - younger children
+
+cdi_wg_dataset <- read_csv(here("data/byers-heinlein_wg_summary_data_en-fr.csv"))
+
+cdi_wg <- cdi_wg_dataset %>% # Create new dataset to work with
+  rename(word_production = word_vocab_production) %>%
+  rename(word_comprehension = word_vocab_comprehension) %>%
+  rename(concept_production = concept_vocab_production) %>%
+  rename(concept_comprehension = concept_vocab_comprehension) %>% 
+  rename(lang_production = lang_vocab_production) %>%
+  rename(lang_comprehension = lang_vocab_comprehension)
+
+```
+## Combine wg and ws datasets
+```{r}
+
+cdi <- full_join(cdi_wg, cdi_ws) %>%
+  mutate(form_id = paste(form_id, form))
+
+```
+
+## Language group - select monolinguals and French/English bilinguals
+```{r}
+
+# Determine language group
+cdi <- cdi %>%
+  mutate(lang_group = case_when(
+  exposure_to_english >= .90 ~ "monolingual", # Monolingual >90% English or French
+  exposure_to_french >= .90 ~ "monolingual",
+  exposure_to_english >= .25 & exposure_to_french >= .25 ~ "bilingual", # Bilingual at least 25% English and French
+  exposure_to_other_language >= .10 ~ "other", # No third language >10%
+  TRUE ~ "other")) 
+
+n_other <- cdi %>% #421 other-language children
+  filter(lang_group == "other") %>%
+  summarize(n_other = n_distinct(child_id)) %>%
+  pull(n_other)
+
+#How many administrations in each lang group?
+cdi %>% 
+  count(lang_group)
+
+# Filter out "other"
+
+cdi <- cdi %>%
+  filter(lang_group != "other") %>%
+  mutate(lang_group = as.factor(lang_group))
+
+```
+
+
+## Remove premature, low birthweight, age
+```{r}
+
+premature <- cdi %>% count(premature) # 48 with no information
+health <- cdi %>% count(health_issues) # 57 no information
+birthweight <- cdi %>% count(low_birthweight) # 124 no information
+wrong_age <- cdi %>% count(child_age_in_months) # 2 7-month-olds, will include the 12 17-month-olds
+
+
+cdi <- cdi %>%
+  filter(premature == "no") %>%
+  filter(health_issues == "no") %>%
+  filter(low_birthweight == "no") %>%
+  filter(child_age_in_months >= 8)
+
+n_premature_health_age_removed <- cdi %>% # 948 distinct visits
+  summarize(n_visits = n_distinct(visit_id)) %>%
+  pull(n_visits)
+
+
+```
+## Dominance 
+```{r dominance}
+
+# Determine which language is dominant
+
+cdi <- cdi %>%
+  mutate(dom_lang = case_when(
+    exposure_to_english > exposure_to_french ~ "english",
+    exposure_to_french > exposure_to_english ~ "french",
+    exposure_to_english == exposure_to_french ~ "balanced", 
+    exposure_to_english >= .90 ~ "english", # to handle a few NA
+    exposure_to_french >= .90 ~ "french"
+  ))
+
+# For balanced kids, make lang with higher vocab score dominant. See if consistent across production/comprehension:
+
+cdi %>%
+  filter(dom_lang == "balanced") %>%
+  select(child_id, visit_id, exposure_to_english, exposure_to_french, lang_production, lang_comprehension, lang_group, form_language) %>%
+  mutate(form_language = str_to_lower(str_remove(form_language, " \\(.*\\)"))) %>%
+  pivot_wider(names_from = "form_language", values_from = c("lang_production", "lang_comprehension")) %>%
+  mutate(domlangprod = case_when(lang_production_english > lang_production_french ~ "en",
+                                 lang_production_french > lang_production_english ~ "fr",
+                                 is.na(lang_production_english) & !is.na(lang_production_french) ~ "fr",
+                                 TRUE ~ "check"),
+         domlangcomp = case_when(lang_comprehension_english > lang_comprehension_french ~ "en",
+                                 lang_comprehension_french > lang_comprehension_english ~ "fr",
+                                 is.na(lang_comprehension_english) & is.na(lang_comprehension_french) ~ domlangprod,
+                                 TRUE ~ "check"),
+         domlangprod = case_when(lang_production_english == lang_production_french ~ domlangcomp,
+                                 TRUE ~ domlangprod),
+         balance_check = ifelse(domlangcomp == domlangprod, "same", "DIFFERENT")) %>%  
+  arrange(child_id)
+
+#One kid with equal exposure to FR and EN has higher productive vocab in English but higher receptive vocab in French. We will go with higher productive vocab to assign dominance.
+
+#How many kids have different lang dominances at different visits?
+cdi %>%
+  select(child_id, lab_visit_num, visit_id, exposure_to_english, exposure_to_french, lang_group, form_language, dom_lang) %>%
+  group_by(child_id) %>%
+  filter(n_distinct(dom_lang) > 1)%>%
+  distinct(child_id) #looks like 18 kids switch language dominance between visits, mostly fairly balanced bilinguals.
+
+#---------------------------------Set dom lang to higher productive score for those balanced kids, or if prod score is equal then comp score
+
+fixdomlang <- cdi %>%
+  filter(dom_lang == "balanced") %>%
+  select(child_id, visit_id, exposure_to_english, exposure_to_french, lang_production, lang_comprehension, lang_group, form_language) %>%
+  mutate(form_language = str_to_lower(str_remove(form_language, " \\(.*\\)"))) %>%
+  pivot_wider(names_from = "form_language", values_from = c("lang_production", "lang_comprehension")) %>%
+  mutate(across(where(is.numeric), ~replace_na(., 0))) %>% #make NAs 0 temporarily to calculate dominance
+  mutate(dom_lang = case_when(
+    exposure_to_english == exposure_to_french & lang_production_english > lang_production_french ~ "english",
+    exposure_to_english == exposure_to_french & lang_production_french > lang_production_english ~ "french",
+    exposure_to_english == exposure_to_french & lang_comprehension_english > lang_comprehension_french ~ "english",
+    exposure_to_english == exposure_to_french & lang_comprehension_french > lang_comprehension_english ~ "french"
+  )) %>%
+  select(child_id, visit_id, dom_lang_fixed = dom_lang)
+
+cdi <- cdi %>%
+  left_join(fixdomlang) %>%
+  mutate(dom_lang = case_when(dom_lang == "balanced" ~ dom_lang_fixed,
+                              TRUE ~ dom_lang)) %>%
+  select(-dom_lang_fixed)
+
+cdi %>% count(dom_lang) # 785 English dominant, 587 French_dominant administrations
+
+cdi <- cdi %>%
+  mutate(dom_cdi = case_when(
+    dom_lang == "english" & form_language == "English (American)" ~ "dominant",
+    dom_lang == "english" & form_language == "French (Quebecois)" ~ "nondominant",
+    dom_lang == "french" & form_language == "French (Quebecois)" ~ "dominant",
+    dom_lang == "french" & form_language == "English (American)" ~ "nondominant",
+    dom_lang == "balanced" ~ "balanced"
+  ))
+
+cdi %>% count(dom_cdi) # 936 administrations in dominant language, 434 in non-dominant language
+
+```
+
+## For monolinguals remove non-dominant language and remove other lang scores from concept and productive vocab. Set mono TEs to 0
+```{r}
+
+cdi <- cdi %>%
+  filter(!(lang_group == "monolingual" & dom_cdi == "nondominant")) %>% # for monolinguals, filter if not dominant lang vocab
+  #Hbecause we are removing 2nd CDIs for monolinguals, should recode values for "forms_filled_visit" to be consistent with the data
+  mutate(forms_filled_visit = case_when(lang_group == "monolingual" & forms_filled_visit == "English & French" ~ paste0(str_to_title(dom_lang), " only"),
+                                        TRUE ~ forms_filled_visit)) %>%
+  mutate(concept_production = case_when(
+    lang_group == "monolingual" ~ lang_production,
+    TRUE ~ concept_production
+  )) %>%
+  mutate(word_production = case_when(
+    lang_group == "monolingual" ~ lang_production,
+    TRUE ~ word_production
+  )) %>%
+  mutate(te_production = case_when(
+    lang_group == "monolingual" ~ 0,
+    TRUE ~ te_production
+  ))
+```
+
+# Participant characteristics
+
+```{r}
+
+
+# n administrations, 1338 administrations
+cdi %>%
+  summarize(n = n_distinct(form_id))
+
+#n administrations per lang group, 510 monolingual, 828 bilingual
+cdi %>%
+  group_by(lang_group) %>%
+  summarize(n = n_distinct(form_id))
+
+#n administrations per lang group and dom lang, 472 En-dom bilingual administrations, 356 Fr-dom bi, 277 En mono, 233 Fr mono
+cdi %>%
+  group_by(lang_group, dom_lang) %>%
+  summarize(n = n_distinct(form_id)) %>%
+  group_by(lang_group) %>%
+  mutate(pct = n/sum(n))
+  
+#n children = 743
+cdi %>%
+  summarize(n = n_distinct(child_id))
+
+#n children per lang group, 337 monolingual, 416 bilingual. Note: 10 kids switch lang group between visits
+cdi %>%
+  group_by(lang_group) %>%
+  summarize(n = n_distinct(child_id))
+
+#10 kids switch lang group between visits
+cdi %>%
+  group_by(child_id) %>%
+  filter(n_distinct(lang_group) > 1) %>%
+  distinct(child_id) %>%
+  nrow()
+
+#n visits per lang group, 437 bilingual visits, 510 monolingual visits
+cdi %>%
+  group_by(lang_group) %>%
+  summarize(n = n_distinct(visit_id))
+
+#n children per dom lang per lang group, 196 En-dom bilinguals, 157 Fr-dom bilinguals, 217 En monos, 199 Fr monos
+cdi %>%
+  group_by(lang_group, dom_lang) %>%
+  summarize(n = n_distinct(child_id)) 
+
+#n visits per dominant language, 523 En-dom visits, 424 Fr-dom visits
+cdi %>%
+  group_by(dom_lang) %>%
+  summarize(n = n_distinct(visit_id)) 
+
+# total ns for comprehension, 163 bi 253  mono
+cdi %>%
+  group_by(lang_group) %>%
+  filter(!is.na(word_comprehension)) %>% #filter out WS forms which don't have comprehension scores
+  summarize(n = n_distinct(child_id)) 
+
+# total ns for production, 337 bi 416 mono
+cdi %>%
+  group_by(lang_group) %>%
+  summarize(n = n_distinct(child_id)) 
+
+# parental education
+
+ #percent of visits with education info and which parent: 98.5% mothers, 1.2% not reported, 0.3% fathers
+cdi %>% 
+  distinct(visit_id, edu_parent) %>% 
+  tabyl(edu_parent)
+
+ #average years of education by lang group, bi = 16.9 mono = 16.7
+cdi %>% 
+  distinct(visit_id, lang_group, years_education) %>% 
+  group_by(lang_group) %>%
+  summarize(av_yrs_edu = mean(years_education, na.rm = TRUE)) 
+
+ #highest edu level, 3 mothers of monolinguals have high school, everyone else has at least some postsecondary
+cdi %>%
+  distinct(visit_id, highest_edu_desc, edu_parent, lang_group) %>%
+  count(highest_edu_desc, edu_parent, lang_group) 
+
+#gender, 350 girsl 393 boys (47% female)
+cdi %>% 
+  distinct(child_id, sex) %>%
+  tabyl(sex)
+ 
+#n kids per gender per lang group, 156 bilingual girls, 181 bilingual boys, 195 mono girls, 221 mono boys
+cdi %>% 
+  distinct(child_id, lang_group, sex) %>%
+  count(lang_group, sex) %>%
+  group_by(lang_group) %>%
+  mutate(pct = n/sum(n))
+
+#who filled out CDI
+cdi %>% 
+  distinct(form_id,responding_caregiver, lang_group) %>%
+  count(lang_group, responding_caregiver) %>%
+  group_by(lang_group) %>%
+  mutate(pct = n/sum(n)) %>%
+  arrange(lang_group, desc(n))
+
+#which CDI versions? 647 WG administrations, 691 WS administrations
+cdi %>%
+  count(form)
+
+```
+
+
+
+# Clean data ready for regression
+
+##Centre age
+```{r}
+# Create variables to center age at 12 months for comprehension models
+# make monolinguals the reference df
+cdi <- cdi %>%
+  mutate(lang_group = fct_relevel(lang_group, "monolingual", "bilingual")) %>%
+  mutate(age_decimal_months = child_age_in_days/30.41667) %>% #use age in days and divide by average days in a month to get their age in months with a decimal, for easier plot visualization. 30.41667 is 365/12
+  mutate(age_decimal_months_centred = age_decimal_months - 12)
+
+```
+
+
+## Make dataset long
+
+```{r}
+
+# Pivot word and concept vocabs, only keep values if both forms are filled out
+cdi_total_scores <- cdi %>%
+  select(-form_language, -responding_caregiver) %>%
+  pivot_longer(cols = c("word_production", "concept_production", "lang_production", "word_comprehension", "concept_comprehension", "lang_comprehension", "te_comprehension", "te_production"), names_to = c("vocab_measure", "vocab_modality"), values_to = "vocab_score", names_sep = "_") %>%
+  filter(lang_group == "monolingual" | forms_filled_visit == "English & French") %>%
+  select(-form_id) %>%
+  filter(!is.na(vocab_score)) %>%    # remove NAs
+  mutate(vocab_measure = case_when(
+    vocab_measure == "lang" ~ dom_cdi, # indicate whether the score is for dom or nondom language
+    TRUE ~ vocab_measure)) %>%
+  select(-dom_cdi) %>% # don't need dom_cdi column anymore
+  distinct()  # removes duplicate rows
+
+
+# Create non-dominant for monolinguals (this is the same as the value for dominant)
+cdi_mono_nondom <- cdi_total_scores %>%
+  filter(lang_group == "monolingual" & vocab_measure == "dominant") %>%
+  mutate(vocab_measure = "nondominant")
+  
+
+# Join total scores with monolingual dominant
+cdi_long <- cdi_total_scores %>%
+  full_join(cdi_mono_nondom) %>%
+  relocate(vocab_score, .after = last_col()) %>%
+  mutate(vocab_measure = fct_relevel(vocab_measure, "word", "concept", "dominant", "nondominant")) #reorder factor levels
+
+
+```
+
+## Check number of cases for dominant, non-dominant, word, and concept
+```{r}
+
+cdi_long %>%
+  group_by(lang_group, vocab_measure, vocab_modality) %>%
+  tally()
+
+```
+
+# DATA VISUALIZATION
+
+## Visualize production - points above 750 not plotted
+```{r}
+#Note: this model is quadratic, use polynomial formula for geom_smooth
+cdi_long %>%
+  filter(vocab_modality == "production") %>%
+  filter(vocab_measure != "balanced") %>%
+  filter(vocab_measure != "te") %>%
+  ggplot(aes(x = age_decimal_months, y = vocab_score, color = lang_group, fill = lang_group, lty = lang_group)) +
+  geom_point(alpha = 0.5, shape = 21, stroke = NA, color = "#FFFFFF") +
+  #  stat_smooth(se = FALSE, span = 4) + # adjusted smoothing parameter
+  stat_smooth(se = FALSE, formula = y ~ x + I(x^2), method = "lm") +
+  facet_grid(.~vocab_measure, scales = "free") +
+  coord_cartesian(ylim = c(0,750)) +
+  ggtitle("Production") +
+  theme_bw(base_size = 12) +
+  scale_color_manual(name="language group",
+                          values =c("#377eb8", "#e41a1c")) +
+  scale_fill_manual(name="language group",
+                          values =c("#c9e7ff", "#ffc6c6")) +
+  scale_linetype_manual(name = "language group", values = c("solid", "dashed")) +
+  theme (legend.position = "bottom", legend.key.size = unit(3,"line")) +
+   xlab("child age in months") +
+  ylab("vocabulary size")
+  
+  ggsave(here("./figures/production.png"), dpi=300, height=4, width=7, units="in")
+
+```
+
+
+## Visualize comprehension
+
+```{r}
+#Note: this model is linear, use linear formula for geom_smooth
+cdi_long %>%
+  filter(vocab_modality == "comprehension") %>%
+  filter(vocab_measure != "balanced") %>%
+  filter(vocab_measure != "te") %>%
+  ggplot(aes(x = age_decimal_months, y = vocab_score, color = lang_group, fill = lang_group, lty = lang_group)) +
+  geom_point(alpha = 0.5, shape = 21, stroke = NA, color = "#FFFFFF") +
+  #  stat_smooth(se = FALSE, span = 4) + # adjusted smoothing parameter
+  stat_smooth(se = FALSE, formula = y ~ x, method = "lm") +
+  facet_grid(.~vocab_measure, scales = "free") +
+  coord_cartesian(ylim = c(0,400)) +
+  ggtitle("Comprehension") +
+  theme_bw(base_size = 12) +
+  scale_color_manual(name="language group",
+                          values =c("#377eb8", "#e41a1c")) +
+  scale_fill_manual(name="language group",
+                          values =c("#c9e7ff", "#ffc6c6")) +
+  scale_linetype_manual(name = "language group", values = c("solid", "dashed")) +
+  theme (legend.position = "bottom", legend.key.size = unit(3,"line")) +
+   xlab("child age in months") +
+  ylab("vocabulary size")
+
+ggsave(here("./figures/comprehension.png"), dpi=300, height=4, width=7, units="in")
+
+
+```
+
+#MODELS
+## Production models
+```{r}
+
+#-------------------------------------------------BASE MODELS - LINEAR FIT
+
+prod_models_base <- cdi_long %>%
+  filter(vocab_modality == "production") %>%
+  group_by(vocab_measure) %>%
+  nest() %>%
+  mutate(base_model = map(data, function(df) lmer(vocab_score ~ age_decimal_months*lang_group + (1|child_id), data = df, REML = FALSE)))  %>%
+  filter(vocab_measure != "te") #don't need this one
+
+#-------------------------------------------------GROWTH CURVE MODELS - QUADRATIC FIT
+
+prod_models_quadratic <- prod_models_base %>%
+  mutate(quadratic_model = map(data, function(df) lmer(vocab_score ~ poly(age_decimal_months, 2)*lang_group + (1|child_id), data = df, REML = FALSE))) 
+
+#-------------------------------------------------COMPARE MODELS
+
+prod_models_comparison <- prod_models_quadratic %>%
+  mutate(compare_models = map2(base_model, quadratic_model, stats::anova))
+
+prod_models_comparison$compare_models #for production, all the quadratic models are a better fit of the data than linear models
+
+```
+
+
+## Comprehension models
+```{r}
+
+#-------------------------------------------------BASE MODELS - LINEAR FIT
+
+comp_models_base <- cdi_long %>%
+  filter(vocab_modality == "comprehension") %>%
+  group_by(vocab_measure) %>%
+  nest() %>%
+  mutate(base_model = map(data, function(df) lmer(vocab_score ~ age_decimal_months*lang_group + (1|child_id), data = df, REML = FALSE))) %>%
+  filter(vocab_measure != "te") #don't need this one
+
+#-------------------------------------------------GROWTH CURVE MODELS - QUADRATIC FIT
+
+comp_models_quadratic <- comp_models_base %>%
+  mutate(quadratic_model = map(data, function(df) lmer(vocab_score ~ poly(age_decimal_months, 2)*lang_group + (1|child_id), data = df, REML = FALSE))) 
+
+#-------------------------------------------------COMPARE MODELS
+
+comp_models_comparison <- comp_models_quadratic %>%
+  mutate(compare_models = map2(base_model, quadratic_model, stats::anova))
+
+comp_models_comparison$compare_models #for comprehension, all the linear models are a better fit of the data than quadratic models
+
+#-------------------------------------------------CENTRE BASE MODEL AGE TERM FOR FINAL MODEL
+
+comp_models_linear_centred <- comp_models_base %>%
+  mutate(linear_model = map(data, function(df) lmer(vocab_score ~ age_decimal_months_centred*lang_group + (1|child_id), data = df, REML = FALSE))) 
+
+```
+# Tables
+
+```{r}
+
+#-------------------------------------------Make Pretty Tables
+
+#--------------Production
+
+#check order of terms
+prod_models_quadratic[1,] #1 = word
+prod_models_quadratic[2,] #2 = concept
+prod_models_quadratic[3,] #3 = dominant
+prod_models_quadratic[4,] #4 = nondominan
+
+tab_wc_prod <- sjPlot::tab_model(prod_models_quadratic$quadratic_model[[1]], #word
+                                 prod_models_quadratic$quadratic_model[[2]], #concept
+                    pred.labels = c("Intercept", "Age (Linear Term)", "Age (Quadratic Term)", 
+                                    "Bilingual", "Age (Linear Term) * Bilingual", 
+                                    "Age (Quadratic Term) * Bilingual"),
+                    dv.labels = c("Word Vocabulary", "Concept Vocabulary"),
+                    show.r2 = TRUE,
+                    show.obs = FALSE,
+                    show.re.var = FALSE,
+                    show.icc = FALSE,
+                    show.ngroups = FALSE,
+                    title = "Expressive Vocabulary - Combined Measures")
+
+tab_dn_prod <- sjPlot::tab_model(prod_models_quadratic$quadratic_model[[3]], #dominant
+                                 prod_models_quadratic$quadratic_model[[4]], #nondominant
+                    pred.labels = c("Intercept", "Age (Linear Term)", "Age (Quadratic Term)", 
+                                    "Bilingual", "Age (Linear Term) * Bilingual", 
+                                    "Age (Quadratic Term) * Bilingual"),
+                    dv.labels = c("Dominant Vocabulary", "Non-Dominant Vocabulary"),
+                    show.r2 = TRUE,
+                    show.obs = FALSE,
+                    show.re.var = FALSE,
+                    show.icc = FALSE,
+                    show.ngroups = FALSE,
+                    title = "Expressive Vocabulary - Single-Language Measures")
+
+#--------------Comprehension
+
+#check order of terms
+comp_models_linear_centred[1,] #word
+comp_models_linear_centred[2,] #concept
+comp_models_linear_centred[3,] #dominant
+comp_models_linear_centred[4,] #nondominant
+
+tab_wc_comp <- sjPlot::tab_model(comp_models_linear_centred$linear_model[[1]], comp_models_linear_centred$linear_model[[2]],
+                    pred.labels = c("Intercept", "Age", "Bilingual", 
+                                    "Age * Bilingual"),
+                    dv.labels = c("Word Vocabulary", "Concept Vocabulary"),
+                    show.r2 = TRUE,
+                    show.obs = FALSE,
+                    show.re.var = FALSE,
+                    show.icc = FALSE,
+                    show.ngroups = FALSE,
+                    title = "Receptive Vocabulary - Combined Measures")
+
+tab_dn_comp <- sjPlot::tab_model(comp_models_linear_centred$linear_model[[3]], comp_models_linear_centred$linear_model[[4]],
+                    pred.labels = c("Intercept", "Age", "Bilingual", 
+                                    "Age * Bilingual"),
+                    dv.labels = c("Dominant Vocabulary", "Non-Dominant Vocabulary"),
+                    show.r2 = TRUE,
+                    show.obs = FALSE,
+                    show.re.var = FALSE,
+                    show.icc = FALSE,
+                    show.ngroups = FALSE,
+                    title = "Receptive Vocabulary - Single-Language Measures")
+
+
+```
+
+
+# Check model assumptions
+
+
+## Production Models
+```{r prod-check}
+#Word
+check_model(prod_models_quadratic$quadratic_model[[1]]) #looks mostly okay, some curvature where should be flat but not egregious
+#Concept
+check_model(prod_models_quadratic$quadratic_model[[2]]) #same as above
+#Dominant
+check_model(prod_models_quadratic$quadratic_model[[3]]) #same as above
+#Nondominant
+check_model(prod_models_quadratic$quadratic_model[[4]]) #same
+
+```
+## Comprehension Models 
+```{r comprehension-check}
+
+#Word
+check_model(comp_models_linear_centred$linear_model[[1]]) #modtly okay, some curvature at edges and a couple influential points
+#Concept
+check_model(comp_models_linear_centred$linear_model[[2]]) #Some influential observations here
+#Dominant
+check_model(comp_models_linear_centred$linear_model[[3]]) #same as above
+#Nondominant
+check_model(comp_models_linear_centred$linear_model[[4]]) #same as above
+
+```
