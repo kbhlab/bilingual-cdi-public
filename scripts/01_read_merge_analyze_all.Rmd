@@ -380,29 +380,33 @@ cdi_long %>%
 
 ## Visualize production - points above 750 not plotted
 ```{r}
+
 #Note: this model is quadratic, use polynomial formula for geom_smooth
 cdi_long %>%
   filter(vocab_modality == "production") %>%
-  filter(vocab_measure != "balanced") %>%
   filter(vocab_measure != "te") %>%
-  ggplot(aes(x = age_decimal_months, y = vocab_score, color = lang_group, fill = lang_group, lty = lang_group)) +
-  geom_point(alpha = 0.5, shape = 21, stroke = NA, color = "#FFFFFF") +
+  ggplot(aes(x = age_decimal_months, y = vocab_score, color = lang_group, fill = lang_group, lty = lang_group, shape = lang_group)) +
+  geom_point(alpha = 0.5, stroke = NA) +
   #  stat_smooth(se = FALSE, span = 4) + # adjusted smoothing parameter
   stat_smooth(se = FALSE, formula = y ~ x + I(x^2), method = "lm") +
   facet_grid(.~vocab_measure, scales = "free") +
   coord_cartesian(ylim = c(0,750)) +
-  ggtitle("Production") +
+  ggtitle("Expressive Vocabulary") +
   theme_bw(base_size = 12) +
   scale_color_manual(name="language group",
                           values =c("#377eb8", "#e41a1c")) +
   scale_fill_manual(name="language group",
                           values =c("#c9e7ff", "#ffc6c6")) +
+  scale_shape_manual(name="language group",
+                     values = c(21, 24)) +
   scale_linetype_manual(name = "language group", values = c("solid", "dashed")) +
-  theme (legend.position = "bottom", legend.key.size = unit(3,"line")) +
-   xlab("child age in months") +
+  theme (legend.position = "bottom", legend.key.size = unit(2,"line"), legend.key.width = unit(2,"cm")) +
+  guides(shape = guide_legend(override.aes = list(size = 4,
+                                                  alpha = 1))) +
+  xlab("child age in months") +
   ylab("vocabulary size")
   
-  ggsave(here("./figures/production.png"), dpi=300, height=4, width=7, units="in")
+ggsave(here("./figures/production.png"), dpi=300, height=4, width=7, units="in")
 
 ```
 
@@ -415,21 +419,25 @@ cdi_long %>%
   filter(vocab_modality == "comprehension") %>%
   filter(vocab_measure != "balanced") %>%
   filter(vocab_measure != "te") %>%
-  ggplot(aes(x = age_decimal_months, y = vocab_score, color = lang_group, fill = lang_group, lty = lang_group)) +
-  geom_point(alpha = 0.5, shape = 21, stroke = NA, color = "#FFFFFF") +
+  ggplot(aes(x = age_decimal_months, y = vocab_score, color = lang_group, fill = lang_group, lty = lang_group, shape = lang_group)) +
+  geom_point(alpha = 0.5, stroke = NA) +
   #  stat_smooth(se = FALSE, span = 4) + # adjusted smoothing parameter
   stat_smooth(se = FALSE, formula = y ~ x, method = "lm") +
   facet_grid(.~vocab_measure, scales = "free") +
   coord_cartesian(ylim = c(0,400)) +
-  ggtitle("Comprehension") +
+  ggtitle("Receptive Vocabulary") +
   theme_bw(base_size = 12) +
   scale_color_manual(name="language group",
                           values =c("#377eb8", "#e41a1c")) +
   scale_fill_manual(name="language group",
                           values =c("#c9e7ff", "#ffc6c6")) +
+  scale_shape_manual(name="language group",
+                     values = c(21, 24)) +
   scale_linetype_manual(name = "language group", values = c("solid", "dashed")) +
-  theme (legend.position = "bottom", legend.key.size = unit(3,"line")) +
-   xlab("child age in months") +
+  theme (legend.position = "bottom", legend.key.size = unit(2,"line"), legend.key.width = unit(2,"cm")) +
+  guides(shape = guide_legend(override.aes = list(size = 4,
+                                                  alpha = 1))) +
+  xlab("child age in months") +
   ylab("vocabulary size")
 
 ggsave(here("./figures/comprehension.png"), dpi=300, height=4, width=7, units="in")

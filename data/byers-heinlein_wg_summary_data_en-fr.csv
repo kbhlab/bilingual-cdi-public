@@ -7,8 +7,8 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00123_1_fr,French (Quebecois),WG,00123_1,123,female,1,1y 1m 13d,408,13,0.21,0.37,0.42,Arabic,no,no,yes,17,56,17,56,0,0,56,17,French only,Mother,Byers-Heinlein,18,Master's degree,mother
 00125_1_en,English (American),WG,00125_1,125,male,1,10m 17d,321,10,0.72,0.28,0,NA,no,no,no,0,4,2,50,0,3,47,2,English & French,Mother,Byers-Heinlein,21,Doctoral degree,father
 00125_1_fr,French (Quebecois),WG,00125_1,125,male,1,10m 17d,321,10,0.72,0.28,0,NA,no,no,no,2,46,2,50,0,3,47,2,English & French,Mother,Byers-Heinlein,21,Doctoral degree,father
-00125_2_en,English (American),WG,00125_2,125,male,2,1y 3m 4d,460,15,0.3655,0.6345000000000001,0,NA,no,no,no,10,45,24,196,6,39,157,18,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
-00125_2_fr,French (Quebecois),WG,00125_2,125,male,2,1y 3m 4d,460,15,0.3655,0.6345000000000001,0,NA,no,no,no,14,151,24,196,6,39,157,18,English & French,Not reported,Byers-Heinlein,17,Graduate degree,mother
+00125_2_en,English (American),WG,00125_2,125,male,2,1y 3m 4d,460,15,0.3655,0.6345,0,NA,no,no,no,10,45,24,196,6,39,157,18,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
+00125_2_fr,French (Quebecois),WG,00125_2,125,male,2,1y 3m 4d,460,15,0.3655,0.6345,0,NA,no,no,no,14,151,24,196,6,39,157,18,English & French,Not reported,Byers-Heinlein,17,Graduate degree,mother
 00127_1_fr,French (Quebecois),WG,00127_1,127,male,1,1y 2m 8d,434,14,0,1,0,NA,no,no,no,2,177,2,177,0,0,177,2,French only,Mother,Byers-Heinlein,12,Trade school diploma,mother
 00132_1_fr,French (Quebecois),WG,00132_1,132,male,1,1y 2m 14d,440,14,0.025,0.9,0.075,Spanish,no,no,no,7,125,7,125,0,0,125,7,French only,Father,Byers-Heinlein,21,Doctoral degree,mother
 00133_1_fr,French (Quebecois),WG,00133_1,133,female,1,9m 4d,277,9,0,0.5,0.5,Spanish,no,no,no,1,41,1,41,0,0,41,1,French only,Mother,Byers-Heinlein,17,Graduate degree,mother
@@ -45,15 +45,15 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00177_1_en,English (American),WG,00177_1,177,female,1,1y 3m 13d,469,15,0.5,0.5,0,NA,no,no,no,30,162,56,364,12,134,230,44,English & French,Mother,Byers-Heinlein,18,Master's degree,mother
 00177_1_fr,French (Quebecois),WG,00177_1,177,female,1,1y 3m 13d,469,15,0.5,0.5,0,NA,no,no,no,26,202,56,364,12,134,230,44,English & French,Not reported,Byers-Heinlein,18,Master's degree,mother
 00180_1_fr,French (Quebecois),WG,00180_1,180,male,1,1y 3m 25d,481,15,0.03,0.615,0.355,Spanish,no,no,yes,51,179,51,179,0,0,179,51,French only,Not reported,Byers-Heinlein,21,Doctoral degree,mother
-00181_1_en,English (American),WG,00181_1,181,female,1,1y 2m 17d,443,14,0.657,0,0.34299999999999997,Slovak,no,no,no,10,94,10,94,0,0,94,10,English only,Mother,Byers-Heinlein,12,Trade school diploma,mother
+00181_1_en,English (American),WG,00181_1,181,female,1,1y 2m 17d,443,14,0.657,0,0.343,Slovak,no,no,no,10,94,10,94,0,0,94,10,English only,Mother,Byers-Heinlein,11,High school,mother
 00182_1_en,English (American),WG,00182_1,182,female,1,1y 2m 12d,438,14,1,0,0,NA,no,no,no,20,104,20,104,0,0,104,20,English only,Mother,Byers-Heinlein,17,Graduate degree,mother
 00183_1_en,English (American),WG,00183_1,183,male,1,1y 2m 4d,430,14,1,0,0,NA,no,no,no,16,78,16,78,0,0,78,16,English only,Mother,Byers-Heinlein,21,Doctoral degree,mother
 00184_1_fr,French (Quebecois),WG,00184_1,184,female,1,1y 2m 0d,426,14,0,1,0,NA,no,no,no,22,160,22,160,0,0,160,22,French only,Mother,Byers-Heinlein,11,High school,mother
 00185_1_en,English (American),WG,00185_1,185,male,1,1y 1m 21d,416,13,0.145,0.74,0.115,Wolof,no,no,no,2,80,4,248,1,62,186,3,English & French,Mother,Byers-Heinlein,16,Bachelor's degree,mother
 00185_1_fr,French (Quebecois),WG,00185_1,185,male,1,1y 1m 21d,416,13,0.145,0.74,0.115,Wolof,no,no,no,2,168,4,248,1,62,186,3,English & French,Mother,Byers-Heinlein,16,Bachelor's degree,mother
 00189_1_fr,French (Quebecois),WG,00189_1,189,male,1,10m 10d,314,10,0,0.72,0.28,Arabic,no,no,no,2,8,2,8,0,0,8,2,French only,Father,Byers-Heinlein,12,Trade school diploma,mother
-00190_1_en,English (American),WG,00190_1,190,male,1,1y 3m 9d,465,15,0.657,0.34299999999999997,0,NA,yes,no,no,34,220,91,527,24,191,336,67,English & French,Mother,Byers-Heinlein,18,Professional degree,mother
-00190_1_fr,French (Quebecois),WG,00190_1,190,male,1,1y 3m 9d,465,15,0.657,0.34299999999999997,0,NA,yes,no,no,57,307,91,527,24,191,336,67,English & French,Mother,Byers-Heinlein,18,Professional degree,mother
+00190_1_en,English (American),WG,00190_1,190,male,1,1y 3m 9d,465,15,0.657,0.343,0,NA,yes,no,no,34,220,91,527,24,191,336,67,English & French,Mother,Byers-Heinlein,18,Professional degree,mother
+00190_1_fr,French (Quebecois),WG,00190_1,190,male,1,1y 3m 9d,465,15,0.657,0.343,0,NA,yes,no,no,57,307,91,527,24,191,336,67,English & French,Mother,Byers-Heinlein,18,Professional degree,mother
 00197_1_en,English (American),WG,00197_1,197,male,1,9m 27d,300,9,0.98,0.02,0,NA,no,no,no,0,102,0,102,0,0,102,0,English only,Mother,Byers-Heinlein,21,Doctoral degree,mother
 00198_1_en,English (American),WG,00198_1,198,male,1,1y 2m 6d,432,14,1,0,0,NA,no,no,no,0,8,0,8,0,0,8,0,English only,Mother,Byers-Heinlein,18,Professional degree,mother
 00199_1_en,English (American),WG,00199_1,199,female,1,1y 3m 12d,468,15,0.348,0.49,0.163,Italian,yes,no information,no,7,115,21,290,7,82,208,14,English & French,Mother,Byers-Heinlein,15,Some college/university,mother
@@ -61,11 +61,11 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00200_1_fr,French (Quebecois),WG,00200_1,200,male,1,1y 3m 7d,463,15,0,1,0,NA,no,no,no,11,159,11,159,0,0,159,11,French only,Mother,Byers-Heinlein,18,Master's degree,mother
 00203_1_fr,French (Quebecois),WG,00203_1,203,female,1,1y 3m 1d,457,15,0,1,0,NA,no,no information,no,16,79,16,79,0,0,79,16,French only,Mother,Byers-Heinlein,15,Some college/university,mother
 00205_1_en,English (American),WG,00205_1,205,male,1,1y 2m 29d,455,14,0.855,0.145,0,NA,no,yes,no,0,23,0,23,0,0,23,0,English only,Mother,Byers-Heinlein,17,Graduate degree,mother
-00207_1_en,English (American),WG,00207_1,207,female,1,1y 2m 19d,445,14,0.212,0.5920000000000001,0.196,"Armenian, Turkish",no,no,yes,3,23,6,83,2,17,66,4,English & French,Mother,Byers-Heinlein,21,Doctoral degree,mother
-00207_1_fr,French (Quebecois),WG,00207_1,207,female,1,1y 2m 19d,445,14,0.212,0.5920000000000001,0.196,"Armenian, Turkish",no,no,yes,3,60,6,83,2,17,66,4,English & French,Mother,Byers-Heinlein,21,Doctoral degree,mother
-00208_1_en,English (American),WG,00208_1,208,female,1,1y 2m 19d,445,14,0.212,0.5920000000000001,0.196,"Armenian, Turkish",no,no,no,4,17,13,91,4,14,77,9,English & French,Mother,Byers-Heinlein,21,Doctoral degree,mother
-00208_1_fr,French (Quebecois),WG,00208_1,208,female,1,1y 2m 19d,445,14,0.212,0.5920000000000001,0.196,"Armenian, Turkish",no,no,no,9,74,13,91,4,14,77,9,English & French,Mother,Byers-Heinlein,21,Doctoral degree,mother
-00209_1_en,English (American),WG,00209_1,209,male,1,1y 1m 26d,421,13,0.865,0.107,0.02899999999999999,Portuguese,no,yes,no,23,119,23,119,0,0,119,23,English only,Mother,Byers-Heinlein,16,Bachelor's degree,mother
+00207_1_en,English (American),WG,00207_1,207,female,1,1y 2m 19d,445,14,0.212,0.592,0.196,"Armenian, Turkish",no,no,yes,3,23,6,83,2,17,66,4,English & French,Mother,Byers-Heinlein,21,Doctoral degree,mother
+00207_1_fr,French (Quebecois),WG,00207_1,207,female,1,1y 2m 19d,445,14,0.212,0.592,0.196,"Armenian, Turkish",no,no,yes,3,60,6,83,2,17,66,4,English & French,Mother,Byers-Heinlein,21,Doctoral degree,mother
+00208_1_en,English (American),WG,00208_1,208,female,1,1y 2m 19d,445,14,0.212,0.592,0.196,"Armenian, Turkish",no,no,no,4,17,13,91,4,14,77,9,English & French,Mother,Byers-Heinlein,21,Doctoral degree,mother
+00208_1_fr,French (Quebecois),WG,00208_1,208,female,1,1y 2m 19d,445,14,0.212,0.592,0.196,"Armenian, Turkish",no,no,no,9,74,13,91,4,14,77,9,English & French,Mother,Byers-Heinlein,21,Doctoral degree,mother
+00209_1_en,English (American),WG,00209_1,209,male,1,1y 1m 26d,421,13,0.865,0.107,0.029,Portuguese,no,yes,no,23,119,23,119,0,0,119,23,English only,Mother,Byers-Heinlein,16,Bachelor's degree,mother
 00210_1_en,English (American),WG,00210_1,210,male,1,1y 2m 2d,428,14,0.828,0.172,0,NA,no,no,no,18,104,19,107,0,1,106,19,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
 00210_1_fr,French (Quebecois),WG,00210_1,210,male,1,1y 2m 2d,428,14,0.828,0.172,0,NA,no,no,no,1,3,19,107,0,1,106,19,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
 00211_1_en,English (American),WG,00211_1,211,female,1,1y 2m 18d,444,14,1,0,0,NA,no,no,no,12,150,12,150,0,0,150,12,English only,Mother,Byers-Heinlein,18,Professional degree,mother
@@ -81,7 +81,7 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00222_1_fr,French (Quebecois),WG,00222_1,222,female,1,1y 2m 14d,440,14,0,1,0,NA,no,no,no,15,73,15,73,0,0,73,15,French only,Father,Byers-Heinlein,16,Bachelor's degree,mother
 00223_1_fr,French (Quebecois),WG,00223_1,223,female,1,1y 2m 9d,435,14,0,0.5,0.5,Arabic,no,no,no,27,205,27,205,0,0,205,27,French only,Father,Byers-Heinlein,17,Graduate degree,mother
 00224_1_fr,French (Quebecois),WG,00224_1,224,male,1,1y 2m 8d,434,14,0,0.54,0.46,Arabic,no,no,no,7,110,7,110,0,0,110,7,French only,Mother,Byers-Heinlein,17,Graduate degree,mother
-00225_1_fr,French (Quebecois),WG,00225_1,225,male,1,1y 2m 6d,432,14,0.05599999999999999,0.944,0,NA,no,no,no,3,85,3,85,0,0,85,3,French only,Mother,Byers-Heinlein,18,Master's degree,mother
+00225_1_fr,French (Quebecois),WG,00225_1,225,male,1,1y 2m 6d,432,14,0.056,0.944,0,NA,no,no,no,3,85,3,85,0,0,85,3,French only,Mother,Byers-Heinlein,18,Master's degree,mother
 00227_1_en,English (American),WG,00227_1,227,male,1,9m 24d,297,9,0.57,0.43,0,NA,no,no,no,0,8,1,18,0,6,12,1,English & French,Mother,Byers-Heinlein,12,Trade school diploma,mother
 00227_1_fr,French (Quebecois),WG,00227_1,227,male,1,9m 24d,297,9,0.57,0.43,0,NA,no,no,no,1,10,1,18,0,6,12,1,English & French,Mother,Byers-Heinlein,12,Trade school diploma,mother
 00228_1_fr,French (Quebecois),WG,00228_1,228,female,1,9m 21d,294,9,0,1,0,NA,no,yes,no,1,14,1,14,0,0,14,1,French only,Mother,Byers-Heinlein,18,Professional degree,mother
@@ -94,8 +94,8 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00233_1_fr,French (Quebecois),WG,00233_1,233,female,1,9m 23d,296,9,0,0.3,0.7,Polish,no,no,no,0,0,0,0,0,0,0,0,French only,Mother,Byers-Heinlein,21,Doctoral degree,mother
 00234_1_en,English (American),WG,00234_1,234,male,1,9m 23d,296,9,0.64,0.36,0,NA,yes,no,no,6,27,8,69,2,9,60,6,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
 00234_1_fr,French (Quebecois),WG,00234_1,234,male,1,9m 23d,296,9,0.64,0.36,0,NA,yes,no,no,2,42,8,69,2,9,60,6,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
-00234_2_en,English (American),WG,00234_2,234,male,2,1y 2m 16d,442,14,0.6679999999999999,0.332,0,NA,yes,no,no,14,100,31,209,7,46,163,24,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
-00234_2_fr,French (Quebecois),WG,00234_2,234,male,2,1y 2m 16d,442,14,0.6679999999999999,0.332,0,NA,yes,no,no,17,109,31,209,7,46,163,24,English & French,Not reported,Byers-Heinlein,17,Graduate degree,mother
+00234_2_en,English (American),WG,00234_2,234,male,2,1y 2m 16d,442,14,0.668,0.332,0,NA,yes,no,no,14,100,31,209,7,46,163,24,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
+00234_2_fr,French (Quebecois),WG,00234_2,234,male,2,1y 2m 16d,442,14,0.668,0.332,0,NA,yes,no,no,17,109,31,209,7,46,163,24,English & French,Not reported,Byers-Heinlein,17,Graduate degree,mother
 00235_1_en,English (American),WG,00235_1,235,male,1,10m 1d,305,10,1,0,0,NA,no,no,no,1,41,1,41,0,0,41,1,English only,Mother,Byers-Heinlein,18,Master's degree,mother
 00236_1_fr,French (Quebecois),WG,00236_1,236,male,1,10m 3d,307,10,0.05,0.95,0,NA,no,no,no,1,16,1,16,0,0,16,1,French only,Father,Byers-Heinlein,16,Bachelor's degree,mother
 00236_2_fr,French (Quebecois),WG,00236_2,236,male,2,1y 2m 3d,429,14,0,1,0,NA,no,no,no,7,64,7,64,0,0,64,7,French only,Not reported,Byers-Heinlein,16,Bachelor's degree,mother
@@ -132,13 +132,13 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00261_1_fr,French (Quebecois),WG,00261_1,261,male,1,1y 2m 20d,446,14,0.48,0.33,0.195,Mankon,no,no,no,10,44,11,131,0,17,114,11,English & French,Father,Byers-Heinlein,17,Graduate degree,mother
 00262_1_fr,French (Quebecois),WG,00262_1,262,male,1,1y 2m 17d,443,14,0,1,0,NA,no,no,no,4,218,4,218,0,0,218,4,French only,Mother,Byers-Heinlein,13,College certificate/diploma,mother
 00263_1_en,English (American),WG,00263_1,263,male,1,1y 2m 6d,432,14,1,0,0,NA,no,no,no,13,79,13,79,0,0,79,13,English only,Mother,Byers-Heinlein,NA,Not reported,Not reported
-00264_1_en,English (American),WG,00264_1,264,male,1,1y 2m 17d,443,14,0.318,0.6285000000000001,0.0501,Italian,no,no,no,5,150,5,150,0,0,150,5,English only,Father,Byers-Heinlein,17,Graduate degree,mother
+00264_1_en,English (American),WG,00264_1,264,male,1,1y 2m 17d,443,14,0.318,0.6285,0.0501,Italian,no,no,no,5,150,5,150,0,0,150,5,English only,Father,Byers-Heinlein,17,Graduate degree,mother
 00265_1_en,English (American),WG,00265_1,265,female,1,1y 2m 10d,436,14,1,0,0,NA,no,no,no,23,259,23,259,0,0,259,23,English only,Mother,Byers-Heinlein,18,Master's degree,mother
 00266_1_fr,French (Quebecois),WG,00266_1,266,male,1,1y 3m 7d,463,15,0,0.7441,0.256,Portuguese,no,no,no,11,162,11,162,0,0,162,11,French only,Mother,Byers-Heinlein,17,Graduate degree,mother
 00268_1_en,English (American),WG,00268_1,268,female,1,1y 2m 25d,451,14,0.6973,0.3028,0,NA,no,no,no,51,243,60,322,8,68,254,52,English & French,Mother,Byers-Heinlein,15,Some college/university,mother
 00268_1_fr,French (Quebecois),WG,00268_1,268,female,1,1y 2m 25d,451,14,0.6973,0.3028,0,NA,no,no,no,9,79,60,322,8,68,254,52,English & French,Mother,Byers-Heinlein,15,Some college/university,mother
 00269_1_en,English (American),WG,00269_1,269,male,1,1y 2m 28d,454,14,0.974,0.026,0,NA,no,no,no,15,214,15,214,0,0,214,15,English only,Mother,Byers-Heinlein,17,Graduate degree,mother
-00270_1_fr,French (Quebecois),WG,00270_1,270,male,1,1y 2m 20d,446,14,0.109,0.7140000000000001,0.177,Romanian,no information,no,no,16,57,16,57,0,0,57,16,French only,Father,Byers-Heinlein,18,Master's degree,mother
+00270_1_fr,French (Quebecois),WG,00270_1,270,male,1,1y 2m 20d,446,14,0.109,0.714,0.177,Romanian,no information,no,no,16,57,16,57,0,0,57,16,French only,Father,Byers-Heinlein,18,Master's degree,mother
 00271_1_en,English (American),WG,00271_1,271,male,1,1y 2m 20d,446,14,0.3475,0.6525,0,NA,no,no,no,10,19,35,117,10,16,101,25,English & French,Father,Byers-Heinlein,12,Trade school diploma,mother
 00271_1_fr,French (Quebecois),WG,00271_1,271,male,1,1y 2m 20d,446,14,0.3475,0.6525,0,NA,no,no,no,25,98,35,117,10,16,101,25,English & French,Father,Byers-Heinlein,12,Trade school diploma,mother
 00272_1_fr,French (Quebecois),WG,00272_1,272,female,1,1y 2m 4d,430,14,0,1,0,NA,no,no,no,2,178,2,178,0,0,178,2,French only,Mother,Byers-Heinlein,17,Graduate degree,mother
@@ -151,12 +151,12 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00276_1_fr,French (Quebecois),WG,00276_1,276,female,1,1y 2m 9d,435,14,0.63,0.37,0,NA,no,no,no,23,170,35,250,8,45,205,27,English & French,Mother,Byers-Heinlein,18,Professional degree,mother
 00277_1_en,English (American),WG,00277_1,277,female,1,1y 3m 9d,465,15,0.86,0.14,0,NA,yes,no,yes,29,239,29,239,0,0,239,29,English only,Mother,Byers-Heinlein,16,Bachelor's degree,mother
 00278_1_fr,French (Quebecois),WG,00278_1,278,female,1,1y 2m 7d,433,14,0,0.7,0.3,Arabic,no,no,no,1,94,1,94,0,0,94,1,French only,Mother,Byers-Heinlein,18,Master's degree,mother
-00280_1_en,English (American),WG,00280_1,280,female,1,1y 2m 18d,444,14,0.317,0.6829999999999999,0,NA,no,no,no,8,20,27,156,6,19,137,21,English & French,Mother,Byers-Heinlein,16,Bachelor's degree,mother
-00280_1_fr,French (Quebecois),WG,00280_1,280,female,1,1y 2m 18d,444,14,0.317,0.6829999999999999,0,NA,no,no,no,19,136,27,156,6,19,137,21,English & French,Mother,Byers-Heinlein,16,Bachelor's degree,mother
+00280_1_en,English (American),WG,00280_1,280,female,1,1y 2m 18d,444,14,0.317,0.683,0,NA,no,no,no,8,20,27,156,6,19,137,21,English & French,Mother,Byers-Heinlein,16,Bachelor's degree,mother
+00280_1_fr,French (Quebecois),WG,00280_1,280,female,1,1y 2m 18d,444,14,0.317,0.683,0,NA,no,no,no,19,136,27,156,6,19,137,21,English & French,Mother,Byers-Heinlein,16,Bachelor's degree,mother
 00281_1_en,English (American),WG,00281_1,281,female,1,9m 11d,284,9,0.665,0,0.335,"Italian, Hungarian",yes,no,no,5,39,5,39,0,0,39,5,English only,Mother,Byers-Heinlein,15,Some college/university,mother
 00283_1_en,English (American),WG,00283_1,283,female,1,9m 24d,297,9,0.84,0.16,0,NA,no,no,no,0,26,0,26,0,0,26,0,English only,Mother,Byers-Heinlein,17,Graduate degree,mother
-00285_1_en,English (American),WG,00285_1,285,male,1,1y 3m 11d,467,15,0.2052,0.7948000000000001,0,NA,no,no,no,13,19,160,229,9,15,214,151,English & French,Mother,Byers-Heinlein,21,Doctoral degree,mother
-00285_1_fr,French (Quebecois),WG,00285_1,285,male,1,1y 3m 11d,467,15,0.2052,0.7948000000000001,0,NA,no,no,no,147,210,160,229,9,15,214,151,English & French,Mother,Byers-Heinlein,21,Doctoral degree,mother
+00285_1_en,English (American),WG,00285_1,285,male,1,1y 3m 11d,467,15,0.2052,0.7948,0,NA,no,no,no,13,19,160,229,9,15,214,151,English & French,Mother,Byers-Heinlein,21,Doctoral degree,mother
+00285_1_fr,French (Quebecois),WG,00285_1,285,male,1,1y 3m 11d,467,15,0.2052,0.7948,0,NA,no,no,no,147,210,160,229,9,15,214,151,English & French,Mother,Byers-Heinlein,21,Doctoral degree,mother
 00286_1_fr,French (Quebecois),WG,00286_1,286,male,1,9m 14d,287,9,0.057,0.943,0,NA,no,no,no,0,8,0,8,0,0,8,0,French only,Mother,Byers-Heinlein,17,Graduate degree,mother
 00288_1_en,English (American),WG,00288_1,288,female,1,9m 21d,294,9,0.25,0.07,0.68,Spanish,yes,no,no,2,84,2,84,0,0,84,2,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
 00288_1_fr,French (Quebecois),WG,00288_1,288,female,1,9m 21d,294,9,0.25,0.07,0.68,Spanish,yes,no,no,0,0,2,84,0,0,84,2,English & French,Not reported,Byers-Heinlein,17,Graduate degree,mother
@@ -177,8 +177,8 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00303_1_en,English (American),WG,00303_1,303,female,1,9m 14d,287,9,1,0,0,NA,no,no,no,4,36,4,36,0,0,36,4,English only,Mother,Byers-Heinlein,18,Master's degree,mother
 00304_1_en,English (American),WG,00304_1,304,female,1,1y 2m 4d,430,14,1,0,0,NA,no,no,no,22,125,22,125,0,0,125,22,English only,Mother,Byers-Heinlein,17,Graduate degree,mother
 00306_1_en,English (American),WG,00306_1,306,male,1,1y 2m 9d,435,14,1,0,0,NA,no,no,no,6,72,6,72,0,0,72,6,English only,Mother,Byers-Heinlein,15,Some college/university,mother
-00308_1_en,English (American),WG,00308_1,308,male,1,9m 22d,295,9,0.52,0.48,0,NA,no,no,no,1,82,1,108,0,17,91,1,English & French,Mother,Byers-Heinlein,12,Trade school diploma,mother
-00308_1_fr,French (Quebecois),WG,00308_1,308,male,1,9m 22d,295,9,0.52,0.48,0,NA,no,no,no,0,26,1,108,0,17,91,1,English & French,Mother,Byers-Heinlein,12,Trade school diploma,mother
+00308_1_en,English (American),WG,00308_1,308,male,1,9m 22d,295,9,0.52,0.48,0,NA,no,no,no,1,82,1,108,0,17,91,1,English & French,Mother,Byers-Heinlein,11,High school,mother
+00308_1_fr,French (Quebecois),WG,00308_1,308,male,1,9m 22d,295,9,0.52,0.48,0,NA,no,no,no,0,26,1,108,0,17,91,1,English & French,Mother,Byers-Heinlein,11,High school,mother
 00309_1_en,English (American),WG,00309_1,309,male,1,9m 18d,291,9,0.95,0.05,0,NA,yes,yes,no,1,1,1,1,0,0,1,1,English only,Mother,Byers-Heinlein,15,Some college/university,mother
 00310_1_en,English (American),WG,00310_1,310,male,1,9m 15d,288,9,0.7,0.15,0.15,Filipino,no,no,no,0,49,0,63,0,6,57,0,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
 00310_1_fr,French (Quebecois),WG,00310_1,310,male,1,9m 15d,288,9,0.7,0.15,0.15,Filipino,no,no,no,0,14,0,63,0,6,57,0,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
@@ -215,18 +215,18 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00338_1_en,English (American),WG,00338_1,338,male,1,1y 2m 30d,456,14,1,0,0,NA,no,no,no,14,105,14,105,0,0,105,14,English only,Mother,Byers-Heinlein,16,Bachelor's degree,mother
 00339_1_fr,French (Quebecois),WG,00339_1,339,female,1,1y 2m 4d,430,14,0,0.7215,0.2785,Spanish,no,yes,no,15,261,15,261,0,0,261,15,French only,Mother,Byers-Heinlein,13,College certificate/diploma,mother
 00340_1_en,English (American),WG,00340_1,340,male,1,1y 2m 4d,430,14,0.231,0.769,0,NA,no,no,no,4,88,4,88,0,0,88,4,English only,Mother,Byers-Heinlein,15,Some college/university,mother
-00341_1_en,English (American),WG,00341_1,341,female,1,1y 2m 28d,454,14,1,0,0,NA,yes,no,no,4,90,4,90,0,0,90,4,English only,Mother & Father,Byers-Heinlein,12,Trade school diploma,mother
+00341_1_en,English (American),WG,00341_1,341,female,1,1y 2m 28d,454,14,1,0,0,NA,yes,no,no,4,90,4,90,0,0,90,4,English only,Mother & Father,Byers-Heinlein,11,High school,mother
 00343_1_en,English (American),WG,00343_1,343,female,1,1y 2m 28d,454,14,0.608,0.3285,0.0635,Spanish,no,no,no,55,228,56,331,1,80,251,55,English & French,Mother,Byers-Heinlein,16,Bachelor's degree,mother
 00343_1_fr,French (Quebecois),WG,00343_1,343,female,1,1y 2m 28d,454,14,0.608,0.3285,0.0635,Spanish,no,no,no,1,103,56,331,1,80,251,55,English & French,Mother,Byers-Heinlein,16,Bachelor's degree,mother
 00346_1_en,English (American),WG,00346_1,346,male,1,1y 2m 24d,450,14,0.937,0.063,0,NA,no,no,no,0,16,0,16,0,0,16,0,English only,Mother & Father,Byers-Heinlein,15,Some college/university,mother
 00348_1_fr,French (Quebecois),WG,00348_1,348,female,1,1y 3m 8d,464,15,0,1,0,NA,no,no,no,12,207,12,207,0,0,207,12,French only,Not reported,Byers-Heinlein,16,Bachelor's degree,mother
-00351_1_fr,French (Quebecois),WG,00351_1,351,male,1,1y 2m 13d,439,14,0.08800000000000001,0.912,0,NA,no,no,no,57,249,57,249,0,0,249,57,French only,Not reported,Byers-Heinlein,15,Some college/university,mother
+00351_1_fr,French (Quebecois),WG,00351_1,351,male,1,1y 2m 13d,439,14,0.088,0.912,0,NA,no,no,no,57,249,57,249,0,0,249,57,French only,Not reported,Byers-Heinlein,15,Some college/university,mother
 00353_1_en,English (American),WG,00353_1,353,male,1,1y 2m 9d,435,14,0.25,0.75,0,NA,yes,no,no,4,24,13,78,3,18,60,10,English & French,Mother,Byers-Heinlein,13,College certificate/diploma,mother
 00353_1_fr,French (Quebecois),WG,00353_1,353,male,1,1y 2m 9d,435,14,0.25,0.75,0,NA,yes,no,no,9,54,13,78,3,18,60,10,English & French,Mother,Byers-Heinlein,13,College certificate/diploma,mother
 00354_1_fr,French (Quebecois),WG,00354_1,354,male,1,1y 2m 20d,446,14,0.2,0.8,0,NA,no,no,no,28,105,28,105,0,0,105,28,French only,Mother,Byers-Heinlein,17,Graduate degree,mother
 00355_1_fr,French (Quebecois),WG,00355_1,355,female,1,1y 2m 25d,451,14,0,1,0,NA,no,no,no,21,105,21,105,0,0,105,21,French only,Not reported,Byers-Heinlein,16,Bachelor's degree,mother
 00356_1_fr,French (Quebecois),WG,00356_1,356,female,1,1y 2m 10d,436,14,0,1,0,NA,no,no,no,17,209,17,209,0,0,209,17,French only,Not reported,Byers-Heinlein,15,Some college/university,mother
-00357_1_en,English (American),WG,00357_1,357,female,1,1y 2m 19d,445,14,0.836,0,0.16399999999999998,"Portuguese, Italian",no,no,no,29,111,29,111,0,0,111,29,English only,Mother,Byers-Heinlein,18,Professional degree,mother
+00357_1_en,English (American),WG,00357_1,357,female,1,1y 2m 19d,445,14,0.836,0,0.164,"Portuguese, Italian",no,no,no,29,111,29,111,0,0,111,29,English only,Mother,Byers-Heinlein,18,Professional degree,mother
 00359_1_fr,French (Quebecois),WG,00359_1,359,female,1,1y 2m 10d,436,14,0.234,0.767,0,NA,no,no,no,7,190,7,190,0,0,190,7,French only,Not reported,Byers-Heinlein,21,Doctoral degree,mother
 00361_1_fr,French (Quebecois),WG,00361_1,361,male,1,1y 2m 7d,433,14,0.16,0.84,0,NA,no,no,no,0,103,0,103,0,0,103,0,French only,Mother,Byers-Heinlein,21,Doctoral degree,mother
 00362_1_en,English (American),WG,00362_1,362,female,1,1y 2m 22d,448,14,1,0,0,NA,no,no,yes,12,107,12,107,0,0,107,12,English only,Mother,Byers-Heinlein,17,Graduate degree,mother
@@ -237,7 +237,7 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00383_1_en,English (American),WG,00383_1,383,male,1,1y 2m 25d,451,14,0.18,0.82,0,NA,no,no,no,9,46,21,122,6,25,97,15,English & French,Mother,Byers-Heinlein,13,College certificate/diploma,mother
 00383_1_fr,French (Quebecois),WG,00383_1,383,male,1,1y 2m 25d,451,14,0.18,0.82,0,NA,no,no,no,12,76,21,122,6,25,97,15,English & French,Mother,Byers-Heinlein,13,College certificate/diploma,mother
 00384_1_en,English (American),WG,00384_1,384,female,1,1y 2m 5d,431,14,1,0,0,NA,yes,no,no,0,89,0,89,0,0,89,0,English only,Not reported,Byers-Heinlein,12,Trade school diploma,mother
-00385_1_en,English (American),WG,00385_1,385,male,1,1y 2m 29d,455,14,0.8640000000000001,0.136,0,NA,no,no,no,6,99,6,99,0,0,99,6,English only,Mother,Byers-Heinlein,17,Graduate degree,mother
+00385_1_en,English (American),WG,00385_1,385,male,1,1y 2m 29d,455,14,0.864,0.136,0,NA,no,no,no,6,99,6,99,0,0,99,6,English only,Mother,Byers-Heinlein,17,Graduate degree,mother
 00386_1_fr,French (Quebecois),WG,00386_1,386,female,1,1y 2m 1d,427,14,0,1,0,NA,no,no,no,8,128,8,128,0,0,128,8,French only,Mother,Byers-Heinlein,17,Graduate degree,mother
 00387_1_en,English (American),WG,00387_1,387,male,1,1y 2m 19d,445,14,1,0,0,NA,no,no,no,0,1,0,1,0,0,1,0,English only,Mother,Byers-Heinlein,12,Trade school diploma,mother
 00389_1_fr,French (Quebecois),WG,00389_1,389,female,1,1y 2m 11d,437,14,0,1,0,NA,no,no,no,110,260,110,260,0,0,260,110,French only,Mother,Byers-Heinlein,17,Graduate degree,mother
@@ -252,7 +252,7 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00398_1_fr,French (Quebecois),WG,00398_1,398,male,1,1y 2m 20d,446,14,0,1,0,NA,no,no,no,2,86,2,86,0,0,86,2,French only,Mother,Byers-Heinlein,16,Bachelor's degree,mother
 00399_1_fr,French (Quebecois),WG,00399_1,399,male,1,1y 2m 23d,449,14,0,1,0,NA,no,no,no,26,169,26,169,0,0,169,26,French only,Mother,Byers-Heinlein,16,Bachelor's degree,mother
 00403_1_fr,French (Quebecois),WG,00403_1,403,female,1,1y 2m 26d,452,14,0,0.9,0.1,Spanish,no,no,no,30,244,30,244,0,0,244,30,French only,Not reported,Byers-Heinlein,16,Bachelor's degree,mother
-00404_1_fr,French (Quebecois),WG,00404_1,404,male,1,1y 2m 29d,455,14,0.1046,0.8406999999999999,0.0546,Spanish,no,no,no,5,148,5,148,0,0,148,5,French only,Not reported,Byers-Heinlein,17,Graduate degree,mother
+00404_1_fr,French (Quebecois),WG,00404_1,404,male,1,1y 2m 29d,455,14,0.1046,0.8407,0.0546,Spanish,no,no,no,5,148,5,148,0,0,148,5,French only,Not reported,Byers-Heinlein,17,Graduate degree,mother
 00405_1_en,English (American),WG,00405_1,405,female,1,1y 2m 25d,451,14,0.66,0.34,0,NA,no,no,no,12,91,16,138,2,30,108,14,English & French,Father,Byers-Heinlein,17,Graduate degree,mother
 00405_1_fr,French (Quebecois),WG,00405_1,405,female,1,1y 2m 25d,451,14,0.66,0.34,0,NA,no,no,no,4,47,16,138,2,30,108,14,English & French,Father,Byers-Heinlein,17,Graduate degree,mother
 00406_1_en,English (American),WG,00406_1,406,male,1,1y 2m 3d,429,14,0.504,0.496,0,NA,no,no,no,8,102,15,213,4,63,150,11,English & French,Father,Byers-Heinlein,15,Some college/university,mother
@@ -289,8 +289,8 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00429_1_fr,French (Quebecois),WG,00429_1,429,male,1,9m 9d,282,9,0.29,0.71,0,NA,no,no,no,0,20,0,20,0,0,20,0,French only,Mother,Byers-Heinlein,21,Doctoral degree,mother
 00430_1_en,English (American),WG,00430_1,430,female,1,1y 1m 28d,423,13,0.34,0,0.66,German,no,yes,yes,11,264,11,264,0,0,264,11,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
 00430_1_fr,French (Quebecois),WG,00430_1,430,female,1,1y 1m 28d,423,13,0.34,0,0.66,German,no,yes,yes,0,0,11,264,0,0,264,11,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
-00431_1_en,English (American),WG,00431_1,431,female,1,1y 2m 12d,438,14,0.8384999999999999,0.0786,0.08289999999999999,Tagalog,no,no,no,38,191,38,191,0,0,191,38,English & French,Mother,Byers-Heinlein,16,Bachelor's degree,mother
-00431_1_fr,French (Quebecois),WG,00431_1,431,female,1,1y 2m 12d,438,14,0.8384999999999999,0.0786,0.08289999999999999,Tagalog,no,no,no,0,0,38,191,0,0,191,38,English & French,Not reported,Byers-Heinlein,16,Bachelor's degree,mother
+00431_1_en,English (American),WG,00431_1,431,female,1,1y 2m 12d,438,14,0.8385,0.0786,0.0829,Tagalog,no,no,no,38,191,38,191,0,0,191,38,English & French,Mother,Byers-Heinlein,16,Bachelor's degree,mother
+00431_1_fr,French (Quebecois),WG,00431_1,431,female,1,1y 2m 12d,438,14,0.8385,0.0786,0.0829,Tagalog,no,no,no,0,0,38,191,0,0,191,38,English & French,Not reported,Byers-Heinlein,16,Bachelor's degree,mother
 00432_1_en,English (American),WG,00432_1,432,female,1,10m 4d,308,10,0.85,0.15,0,NA,no,no,no,3,27,3,27,0,0,27,3,English only,Mother,Byers-Heinlein,16,Bachelor's degree,mother
 00433_1_en,English (American),WG,00433_1,433,male,1,9m 5d,278,9,1,0,0,NA,no,no,no,0,15,0,15,0,0,15,0,English only,Mother,Byers-Heinlein,17,Graduate degree,mother
 00433_2_en,English (American),WG,00433_2,433,male,2,1y 1m 30d,425,13,1,0,0,NA,no,no,no,5,39,5,39,0,0,39,5,English only,Mother,Byers-Heinlein,17,Graduate degree,mother
@@ -303,7 +303,7 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00438_1_fr,French (Quebecois),WG,00438_1,438,male,1,9m 7d,280,9,0.865,0.135,0,NA,no,no,no information,0,34,1,75,0,14,61,1,English & French,Mother,Byers-Heinlein,18,Master's degree,mother
 00439_1_en,English (American),WG,00439_1,439,male,1,10m 9d,313,10,0.555,0.23,0.215,"Tamil, Punjabi",no,no,no,0,88,0,159,0,35,124,0,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
 00439_1_fr,French (Quebecois),WG,00439_1,439,male,1,10m 9d,313,10,0.555,0.23,0.215,"Tamil, Punjabi",no,no,no,0,71,0,159,0,35,124,0,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
-00439_2_fr,French (Quebecois),WG,00439_2,439,male,2,1y 2m 20d,446,14,0.8543000000000001,0.0629,0.08779999999999999,"Tamil, Punjabi",no,no,no,0,28,0,28,0,0,28,0,French only,Mother,Byers-Heinlein,17,Graduate degree,mother
+00439_2_fr,French (Quebecois),WG,00439_2,439,male,2,1y 2m 20d,446,14,0.8543,0.0629,0.0878,"Tamil, Punjabi",no,no,no,0,28,0,28,0,0,28,0,French only,Mother,Byers-Heinlein,17,Graduate degree,mother
 00440_1_fr,French (Quebecois),WG,00440_1,440,female,1,9m 21d,294,9,0,1,0,NA,no,no,no,0,11,0,11,0,0,11,0,French only,Mother,Byers-Heinlein,15,Some college/university,mother
 00440_2_fr,French (Quebecois),WG,00440_2,440,female,2,1y 2m 6d,432,14,0,1,0,NA,no,no,no,31,144,31,144,0,0,144,31,French only,Not reported,Byers-Heinlein,15,Some college/university,mother
 00441_1_fr,French (Quebecois),WG,00441_1,441,male,1,10m 4d,308,10,0,1,0,NA,no,no,no,1,145,1,145,0,0,145,1,French only,Not reported,Byers-Heinlein,21,Doctoral degree,mother
@@ -400,8 +400,8 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00515_1_en,English (American),WG,00515_1,515,female,1,8m 22d,265,8,0.72,0,0.28,Spanish,no,no,no,0,50,0,50,0,0,50,0,English only,Mother,Byers-Heinlein,17,Graduate degree,mother
 00517_1_en,English (American),WG,00517_1,517,male,1,1y 0m 9d,374,12,0.75,0.25,0,NA,no,no,no,2,15,3,18,1,2,16,2,English & French,Mother,Byers-Heinlein,18,Master's degree,mother
 00517_1_fr,French (Quebecois),WG,00517_1,517,male,1,1y 0m 9d,374,12,0.75,0.25,0,NA,no,no,no,1,3,3,18,1,2,16,2,English & French,Mother,Byers-Heinlein,18,Master's degree,mother
-00519_1_en,English (American),WG,00519_1,519,female,1,9m 9d,282,9,0.6169,0.02899999999999999,0.3542,"Polish, Arabic",no,no,no,2,67,2,67,0,0,67,2,English & French,Mother,Byers-Heinlein,18,Master's degree,mother
-00519_1_fr,French (Quebecois),WG,00519_1,519,female,1,9m 9d,282,9,0.6169,0.02899999999999999,0.3542,"Polish, Arabic",no,no,no,0,0,2,67,0,0,67,2,English & French,Not reported,Byers-Heinlein,18,Master's degree,mother
+00519_1_en,English (American),WG,00519_1,519,female,1,9m 9d,282,9,0.6169,0.029,0.3542,"Polish, Arabic",no,no,no,2,67,2,67,0,0,67,2,English & French,Mother,Byers-Heinlein,18,Master's degree,mother
+00519_1_fr,French (Quebecois),WG,00519_1,519,female,1,9m 9d,282,9,0.6169,0.029,0.3542,"Polish, Arabic",no,no,no,0,0,2,67,0,0,67,2,English & French,Not reported,Byers-Heinlein,18,Master's degree,mother
 00520_1_en,English (American),WG,00520_1,520,male,1,1y 3m 6d,462,15,1,0,0,NA,no,no,no,62,194,62,194,0,0,194,62,English only,Not reported,Byers-Heinlein,18,Master's degree,mother
 00521_1_fr,French (Quebecois),WG,00521_1,521,male,1,1y 2m 5d,431,14,0,0.395,0.605,Spanish,no,no,no,2,85,2,85,0,0,85,2,French only,Mother,Byers-Heinlein,17,Graduate degree,mother
 00522_1_fr,French (Quebecois),WG,00522_1,522,male,1,9m 30d,303,9,0,1,0,NA,no,no,no,3,79,3,79,0,0,79,3,French only,Mother,Byers-Heinlein,15,Some college/university,mother
@@ -438,7 +438,7 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00561_1_en,English (American),WG,00561_1,561,male,1,1y 0m 12d,377,12,0.96,0.04,0,NA,no,no,no,17,59,17,59,0,0,59,17,English only,Mother,Byers-Heinlein,18,Master's degree,mother
 00563_1_fr,French (Quebecois),WG,00563_1,563,female,1,10m 1d,305,10,0,1,0,NA,no,no,no,8,139,8,139,0,0,139,8,French only,Mother,Byers-Heinlein,18,Professional degree,mother
 00565_1_en,English (American),WG,00565_1,565,male,1,9m 22d,295,9,1,0,0,NA,no,no,no,34,335,34,335,0,0,335,34,English only,Mother,Byers-Heinlein,17,Graduate degree,mother
-00566_1_fr,French (Quebecois),WG,00566_1,566,female,1,9m 20d,293,9,0,1,0,NA,no,yes,no,5,52,5,52,0,0,52,5,French only,Father,Byers-Heinlein,12,Trade school diploma,mother
+00566_1_fr,French (Quebecois),WG,00566_1,566,female,1,9m 20d,293,9,0,1,0,NA,no,yes,no,5,52,5,52,0,0,52,5,French only,Father,Byers-Heinlein,11,High school,mother
 00567_1_en,English (American),WG,00567_1,567,female,1,9m 16d,289,9,0.94,0,0.07,Luxembourgish,no,yes,yes,2,13,2,13,0,0,13,2,English & French,Mother,Byers-Heinlein,18,Master's degree,mother
 00567_1_fr,French (Quebecois),WG,00567_1,567,female,1,9m 16d,289,9,0.94,0,0.07,Luxembourgish,no,yes,yes,0,0,2,13,0,0,13,2,English & French,Mother,Byers-Heinlein,18,Master's degree,mother
 00568_1_fr,French (Quebecois),WG,00568_1,568,male,1,10m 5d,309,10,0,1,0,NA,no,no,no,1,26,1,26,0,0,26,1,French only,Father,Byers-Heinlein,18,Professional degree,mother
@@ -473,8 +473,8 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00598_1_en,English (American),WG,00598_1,598,male,1,1y 2m 12d,438,14,0.96,0.04,0,NA,no,no,no,9,70,9,70,0,0,70,9,English only,Mother,Byers-Heinlein,15,Some college/university,mother
 00599_1_en,English (American),WG,00599_1,599,female,1,1y 2m 19d,445,14,0.86,0,0.14,Greek,no,yes,no,4,126,4,126,0,0,126,4,English only,Mother,Byers-Heinlein,17,Graduate degree,mother
 00602_1_en,English (American),WG,00602_1,602,female,1,1y 2m 9d,435,14,0.8,0.2,0,NA,no,no,no,10,22,10,22,0,0,22,10,English only,Mother,Byers-Heinlein,18,Master's degree,mother
-00604_1_en,English (American),WG,00604_1,604,female,1,1y 2m 17d,443,14,0.2638,0,0.7362000000000001,Chinese,no,no,no,2,173,2,173,0,0,173,2,English & French,Father,Byers-Heinlein,21,Doctoral degree,mother
-00604_1_fr,French (Quebecois),WG,00604_1,604,female,1,1y 2m 17d,443,14,0.2638,0,0.7362000000000001,Chinese,no,no,no,0,0,2,173,0,0,173,2,English & French,Not reported,Byers-Heinlein,21,Doctoral degree,mother
+00604_1_en,English (American),WG,00604_1,604,female,1,1y 2m 17d,443,14,0.2638,0,0.7362,Chinese,no,no,no,2,173,2,173,0,0,173,2,English & French,Father,Byers-Heinlein,21,Doctoral degree,mother
+00604_1_fr,French (Quebecois),WG,00604_1,604,female,1,1y 2m 17d,443,14,0.2638,0,0.7362,Chinese,no,no,no,0,0,2,173,0,0,173,2,English & French,Not reported,Byers-Heinlein,21,Doctoral degree,mother
 00606_1_en,English (American),WG,00606_1,606,male,1,1y 1m 26d,421,13,0.2875,0,0.7025,Spanish,no,no,no,0,19,0,19,0,0,19,0,English only,Mother,Byers-Heinlein,21,Doctoral degree,mother
 00607_1_fr,French (Quebecois),WG,00607_1,607,female,1,9m 13d,286,9,0.05,0.95,0,NA,no,no,no,14,161,14,161,0,0,161,14,French only,Mother,Byers-Heinlein,17,Graduate degree,mother
 00607_2_fr,French (Quebecois),WG,00607_2,607,female,2,1y 2m 28d,454,14,0.05,0.95,0,NA,no,no,no,47,216,47,216,0,0,216,47,French only,Father,Byers-Heinlein,17,Graduate degree,mother
@@ -492,21 +492,21 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00634_1_en,English (American),WG,00634_1,634,male,1,1y 0m 17d,382,12,0.66,0.34,0,NA,no,no,no,5,27,5,43,0,11,32,5,English & French,Mother,Byers-Heinlein,18,Master's degree,mother
 00634_1_fr,French (Quebecois),WG,00634_1,634,male,1,1y 0m 17d,382,12,0.66,0.34,0,NA,no,no,no,0,16,5,43,0,11,32,5,English & French,Mother,Byers-Heinlein,18,Master's degree,mother
 00635_1_en,English (American),WG,00635_1,635,female,1,1y 2m 3d,429,14,0.8,0.2,0,NA,no,no,no,2,15,2,15,0,0,15,2,English only,Father,Byers-Heinlein,18,Master's degree,mother
-00636_1_en,English (American),WG,00636_1,636,female,1,1y 0m 11d,376,12,0.5379999999999999,0.462,0,NA,no,no,no,27,140,39,328,9,102,226,30,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
-00636_1_fr,French (Quebecois),WG,00636_1,636,female,1,1y 0m 11d,376,12,0.5379999999999999,0.462,0,NA,no,no,no,12,188,39,328,9,102,226,30,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
-00637_1_en,English (American),WG,00637_1,637,female,1,1y 0m 13d,378,12,0.8865000000000001,0.1136,0,NA,no,no,no,0,48,0,48,0,0,48,0,English only,Mother,Byers-Heinlein,18,Master's degree,mother
+00636_1_en,English (American),WG,00636_1,636,female,1,1y 0m 11d,376,12,0.538,0.462,0,NA,no,no,no,27,140,39,328,9,102,226,30,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
+00636_1_fr,French (Quebecois),WG,00636_1,636,female,1,1y 0m 11d,376,12,0.538,0.462,0,NA,no,no,no,12,188,39,328,9,102,226,30,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
+00637_1_en,English (American),WG,00637_1,637,female,1,1y 0m 13d,378,12,0.8865,0.1136,0,NA,no,no,no,0,48,0,48,0,0,48,0,English only,Mother,Byers-Heinlein,18,Master's degree,mother
 00640_1_en,English (American),WG,00640_1,640,female,1,1y 2m 6d,432,14,0.7321,0.268,0,NA,no,no,no information,1,138,1,226,0,51,175,1,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
 00640_1_fr,French (Quebecois),WG,00640_1,640,female,1,1y 2m 6d,432,14,0.7321,0.268,0,NA,no,no,no information,0,88,1,226,0,51,175,1,English & French,Not reported,Byers-Heinlein,17,Graduate degree,mother
 00641_1_en,English (American),WG,00641_1,641,male,1,9m 12d,285,9,1,0,0,NA,no,no,no,0,16,0,16,0,0,16,0,English only,Mother,Byers-Heinlein,17,Graduate degree,mother
-00642_1_en,English (American),WG,00642_1,642,male,1,1y 1m 30d,425,13,0.2991,0,0.7009000000000001,Finnish,no,no,no,1,32,1,32,0,0,32,1,English only,Mother,Byers-Heinlein,15,Some college/university,mother
+00642_1_en,English (American),WG,00642_1,642,male,1,1y 1m 30d,425,13,0.2991,0,0.7009,Finnish,no,no,no,1,32,1,32,0,0,32,1,English only,Mother,Byers-Heinlein,15,Some college/university,mother
 00643_1_en,English (American),WG,00643_1,643,male,1,1y 0m 3d,368,12,0.98,0.01,0.01,Spanish,no,no,no,0,48,0,48,0,0,48,0,English only,Mother,Byers-Heinlein,16,Bachelor's degree,mother
 00644_1_en,English (American),WG,00644_1,644,male,1,1y 1m 6d,401,13,0.64,0.21,0.15,Spanish,no,no,no,1,38,1,38,0,0,38,1,English only,Mother,Byers-Heinlein,17,Graduate degree,mother
 00647_1_en,English (American),WG,00647_1,647,female,1,1y 2m 24d,450,14,0.7,0.3,0,NA,no,no,no,10,142,14,273,3,87,186,11,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
 00647_1_fr,French (Quebecois),WG,00647_1,647,female,1,1y 2m 24d,450,14,0.7,0.3,0,NA,no,no,no,4,131,14,273,3,87,186,11,English & French,Not reported,Byers-Heinlein,17,Graduate degree,mother
-00648_1_fr,French (Quebecois),WG,00648_1,648,female,1,1y 2m 7d,433,14,0.0356,0.1176,0.8468000000000001,Spanish,no,no,no,4,37,4,37,0,0,37,4,French only,Mother,Byers-Heinlein,17,Graduate degree,mother
+00648_1_fr,French (Quebecois),WG,00648_1,648,female,1,1y 2m 7d,433,14,0.0356,0.1176,0.8468,Spanish,no,no,no,4,37,4,37,0,0,37,4,French only,Mother,Byers-Heinlein,17,Graduate degree,mother
 00649_1_en,English (American),WG,00649_1,649,female,1,9m 1d,274,9,0.32,0.68,0,NA,no,no,no,3,26,3,41,0,0,41,3,English only,Father,Byers-Heinlein,21,Doctoral degree,mother
-00653_1_en,English (American),WG,00653_1,653,male,1,1y 1m 0d,395,13,0.6516,0.34840000000000004,0,NA,no,no,no,3,154,5,186,1,28,158,4,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
-00653_1_fr,French (Quebecois),WG,00653_1,653,male,1,1y 1m 0d,395,13,0.6516,0.34840000000000004,0,NA,no,no,no,2,32,5,186,1,28,158,4,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
+00653_1_en,English (American),WG,00653_1,653,male,1,1y 1m 0d,395,13,0.6516,0.3484,0,NA,no,no,no,3,154,5,186,1,28,158,4,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
+00653_1_fr,French (Quebecois),WG,00653_1,653,male,1,1y 1m 0d,395,13,0.6516,0.3484,0,NA,no,no,no,2,32,5,186,1,28,158,4,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
 00654_1_en,English (American),WG,00654_1,654,male,1,1y 0m 20d,385,12,0.475,0.525,0,NA,no,no,no,1,16,1,31,0,8,23,1,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
 00654_1_fr,French (Quebecois),WG,00654_1,654,male,1,1y 0m 20d,385,12,0.475,0.525,0,NA,no,no,no,0,15,1,31,0,8,23,1,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
 00655_1_en,English (American),WG,00655_1,655,male,1,1y 0m 21d,386,12,0.1675,0.1675,0.665,"Spanish, Portuguese",no,no,no,13,213,13,213,0,0,213,13,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
@@ -518,7 +518,7 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00658_1_fr,French (Quebecois),WG,00658_1,658,male,1,1y 0m 2d,367,12,0,0.65,0.33,Portuguese,no,no,no,1,39,1,39,0,0,39,1,French only,Father,Byers-Heinlein,17,Graduate degree,mother
 00660_1_en,English (American),WG,00660_1,660,male,1,1y 0m 8d,373,12,0.5,0.5,0,NA,no,no,no,1,197,2,427,0,152,275,2,English & French,Mother,Byers-Heinlein,12,Trade school diploma,mother
 00660_1_fr,French (Quebecois),WG,00660_1,660,male,1,1y 0m 8d,373,12,0.5,0.5,0,NA,no,no,no,1,230,2,427,0,152,275,2,English & French,Mother,Byers-Heinlein,12,Trade school diploma,mother
-00661_1_en,English (American),WG,00661_1,661,male,1,1y 0m 9d,374,12,0.6668000000000001,0.3333,0,NA,yes,yes,yes,2,24,2,24,0,0,24,2,English only,Mother,Byers-Heinlein,16,Bachelor's degree,mother
+00661_1_en,English (American),WG,00661_1,661,male,1,1y 0m 9d,374,12,0.6668,0.3333,0,NA,yes,yes,yes,2,24,2,24,0,0,24,2,English only,Mother,Byers-Heinlein,16,Bachelor's degree,mother
 00674_1_fr,French (Quebecois),WG,00674_1,674,female,1,1y 2m 5d,431,14,0,0.4813,0.5188,Spanish,no,no,no,15,119,15,119,0,0,119,15,French only,Mother,Byers-Heinlein,17,Graduate degree,mother
 00677_1_fr,French (Quebecois),WG,00677_1,677,female,1,1y 0m 25d,390,12,0.0649,0.9321,0,NA,no,no,no,6,91,6,91,0,0,91,6,French only,Mother,Byers-Heinlein,13,College certificate/diploma,mother
 00680_1_en,English (American),WG,00680_1,680,male,1,11m 24d,358,11,0.94,0.06,0,NA,no,no,no,0,118,0,118,0,0,118,0,English only,Mother,Byers-Heinlein,15,Some college/university,mother
@@ -538,20 +538,20 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00695_1_fr,French (Quebecois),WG,00695_1,695,male,1,8m 23d,266,8,0,1,0,NA,no,no,no,0,110,0,110,0,0,110,0,French only,Mother,Byers-Heinlein,16,Bachelor's degree,mother
 00695_2_fr,French (Quebecois),WG,00695_2,695,male,2,1y 3m 17d,473,15,0,1,0,NA,no,no,no,15,189,15,189,0,0,189,15,French only,Mother,Byers-Heinlein,17,Graduate degree,mother
 00696_1_en,English (American),WG,00696_1,696,male,1,1y 1m 7d,402,13,1,0,0,NA,no,no,no,1,20,1,20,0,0,20,1,English only,Mother,Byers-Heinlein,15,Some college/university,mother
-00697_1_en,English (American),WG,00697_1,697,female,1,9m 10d,283,9,0.08109999999999999,0.08109999999999999,0.8378,Spanish,no,no,no,0,1,0,58,0,1,57,0,English & French,Father,Byers-Heinlein,17,Graduate degree,mother
-00697_1_fr,French (Quebecois),WG,00697_1,697,female,1,9m 10d,283,9,0.08109999999999999,0.08109999999999999,0.8378,Spanish,no,no,no,0,57,0,58,0,1,57,0,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
+00697_1_en,English (American),WG,00697_1,697,female,1,9m 10d,283,9,0.0811,0.0811,0.8378,Spanish,no,no,no,0,1,0,58,0,1,57,0,English & French,Father,Byers-Heinlein,17,Graduate degree,mother
+00697_1_fr,French (Quebecois),WG,00697_1,697,female,1,9m 10d,283,9,0.0811,0.0811,0.8378,Spanish,no,no,no,0,57,0,58,0,1,57,0,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
 00699_1_en,English (American),WG,00699_1,699,male,1,9m 13d,286,9,0.9039,0,0.0961,Arabic,no,no,no,1,25,1,25,0,0,25,1,English only,Mother,Byers-Heinlein,18,Master's degree,mother
 00700_1_en,English (American),WG,00700_1,700,female,1,1y 2m 11d,437,14,0.585,0.415,0,NA,no,no,no,11,44,11,66,0,12,54,11,English & French,Mother,Byers-Heinlein,18,Master's degree,mother
 00700_1_fr,French (Quebecois),WG,00700_1,700,female,1,1y 2m 11d,437,14,0.585,0.415,0,NA,no,no,no,0,22,11,66,0,12,54,11,English & French,Not reported,Byers-Heinlein,18,Master's degree,mother
 00701_1_en,English (American),WG,00701_1,701,male,1,1y 0m 14d,379,12,1,0,0,NA,no,no,no,0,4,0,4,0,0,4,0,English only,Mother,Byers-Heinlein,16,Bachelor's degree,mother
 00702_1_fr,French (Quebecois),WG,00702_1,702,male,1,9m 4d,277,9,0.025,0.975,0,NA,no,yes,no,0,49,0,49,0,0,49,0,French only,Mother,Byers-Heinlein,18,Master's degree,mother
-00703_1_en,English (American),WG,00703_1,703,male,1,1y 0m 4d,369,12,0.0717,0.5367000000000001,0.3917,Kirundi,no,no,no,6,30,20,65,5,16,49,15,English & French,Mother,Byers-Heinlein,16,Bachelor's degree,mother
-00703_1_fr,French (Quebecois),WG,00703_1,703,male,1,1y 0m 4d,369,12,0.0717,0.5367000000000001,0.3917,Kirundi,no,no,no,14,35,20,65,5,16,49,15,English & French,Mother,Byers-Heinlein,16,Bachelor's degree,mother
+00703_1_en,English (American),WG,00703_1,703,male,1,1y 0m 4d,369,12,0.0717,0.5367,0.3917,Kirundi,no,no,no,6,30,20,65,5,16,49,15,English & French,Mother,Byers-Heinlein,16,Bachelor's degree,mother
+00703_1_fr,French (Quebecois),WG,00703_1,703,male,1,1y 0m 4d,369,12,0.0717,0.5367,0.3917,Kirundi,no,no,no,14,35,20,65,5,16,49,15,English & French,Mother,Byers-Heinlein,16,Bachelor's degree,mother
 00704_1_fr,French (Quebecois),WG,00704_1,704,female,1,1y 0m 16d,381,12,0,1,0,NA,no,no,no,3,179,3,179,0,0,179,3,French only,Mother,Byers-Heinlein,15,Some college/university,mother
 00705_1_fr,French (Quebecois),WG,00705_1,705,male,1,9m 22d,295,9,0.01,0.99,0,NA,no,no,no,2,49,2,49,0,0,49,2,French only,Mother,Byers-Heinlein,17,Graduate degree,mother
 00705_2_fr,French (Quebecois),WG,00705_2,705,male,2,1y 0m 14d,379,12,0,1,0,NA,no,no,no,3,147,3,147,0,0,147,3,French only,Mother,Byers-Heinlein,17,Graduate degree,mother
-00706_1_en,English (American),WG,00706_1,706,male,1,1y 0m 21d,386,12,0.6970999999999999,0.3029,0,NA,no,no,no,0,63,0,98,0,24,74,0,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
-00706_1_fr,French (Quebecois),WG,00706_1,706,male,1,1y 0m 21d,386,12,0.6970999999999999,0.3029,0,NA,no,no,no,0,35,0,98,0,24,74,0,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
+00706_1_en,English (American),WG,00706_1,706,male,1,1y 0m 21d,386,12,0.6971,0.3029,0,NA,no,no,no,0,63,0,98,0,24,74,0,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
+00706_1_fr,French (Quebecois),WG,00706_1,706,male,1,1y 0m 21d,386,12,0.6971,0.3029,0,NA,no,no,no,0,35,0,98,0,24,74,0,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
 00707_1_fr,French (Quebecois),WG,00707_1,707,male,1,9m 24d,297,9,0,0.935,0.065,Arabic,no,no,no,2,55,2,55,0,0,55,2,French only,Mother,Byers-Heinlein,18,Master's degree,mother
 00708_1_en,English (American),WG,00708_1,708,female,1,1y 0m 12d,377,12,0.3,0.7,0,NA,no,no,no,2,7,2,169,0,6,163,2,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
 00708_1_fr,French (Quebecois),WG,00708_1,708,female,1,1y 0m 12d,377,12,0.3,0.7,0,NA,no,no,no,0,162,2,169,0,6,163,2,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
@@ -578,11 +578,11 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00724_2_fr,French (Quebecois),WG,00724_2,724,female,2,1y 2m 18d,444,14,0.44,0.56,0,NA,no,no,no,19,71,24,105,5,28,77,19,English & French,Mother,Byers-Heinlein,18,Master's degree,mother
 00725_1_en,English (American),WG,00725_1,725,male,1,1y 0m 8d,373,12,0.715,0.285,0,NA,no,no,no,0,7,0,29,0,7,22,0,English & French,Mother,Byers-Heinlein,15,Some college/university,mother
 00725_1_fr,French (Quebecois),WG,00725_1,725,male,1,1y 0m 8d,373,12,0.715,0.285,0,NA,no,no,no,0,22,0,29,0,7,22,0,English & French,Mother,Byers-Heinlein,15,Some college/university,mother
-00726_1_en,English (American),WG,00726_1,726,female,1,1y 0m 22d,387,12,0.7140000000000001,0.257,0.02899999999999999,Arabic,no,no,no,5,39,10,55,5,13,42,5,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
-00726_1_fr,French (Quebecois),WG,00726_1,726,female,1,1y 0m 22d,387,12,0.7140000000000001,0.257,0.02899999999999999,Arabic,no,no,no,5,16,10,55,5,13,42,5,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
+00726_1_en,English (American),WG,00726_1,726,female,1,1y 0m 22d,387,12,0.714,0.257,0.029,Arabic,no,no,no,5,39,10,55,5,13,42,5,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
+00726_1_fr,French (Quebecois),WG,00726_1,726,female,1,1y 0m 22d,387,12,0.714,0.257,0.029,Arabic,no,no,no,5,16,10,55,5,13,42,5,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
 00729_1_en,English (American),WG,00729_1,729,female,1,1y 1m 7d,402,13,0.07,0,0.93,"Cree, Creole",no,no,no,2,30,2,30,0,0,30,2,English only,Mother,Byers-Heinlein,16,Bachelor's degree,mother
 00730_1_en,English (American),WG,00730_1,730,female,1,1y 2m 10d,436,14,0.417,0,0.583,Russian,no,no,no,0,250,0,250,0,0,250,0,English only,Mother,Byers-Heinlein,18,Master's degree,mother
-00731_1_en,English (American),WG,00731_1,731,male,1,10m 2d,306,10,0.7928000000000001,0,0.2073,German,no,yes,no,0,72,0,72,0,0,72,0,English only,Mother,Byers-Heinlein,18,Master's degree,mother
+00731_1_en,English (American),WG,00731_1,731,male,1,10m 2d,306,10,0.7928,0,0.2073,German,no,yes,no,0,72,0,72,0,0,72,0,English only,Mother,Byers-Heinlein,18,Master's degree,mother
 00732_1_fr,French (Quebecois),WG,00732_1,732,female,1,8m 26d,269,8,0,1,0,NA,no,no,no,1,67,1,67,0,0,67,1,French only,Mother,Byers-Heinlein,13,College certificate/diploma,mother
 00735_1_fr,French (Quebecois),WG,00735_1,735,male,1,1y 0m 6d,371,12,0,1,0,NA,no,no,no,0,33,0,33,0,0,33,0,French only,Mother,Byers-Heinlein,17,Graduate degree,mother
 00736_1_en,English (American),WG,00736_1,736,female,1,1y 0m 10d,375,12,1,0,0,NA,no,no,no,1,18,1,18,0,0,18,1,English only,Mother,Byers-Heinlein,18,Professional degree,mother
@@ -592,8 +592,8 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00737_2_fr,French (Quebecois),WG,00737_2,737,male,2,1y 2m 24d,450,14,0.64,0.36,0,NA,no,no,no,2,11,7,145,2,11,134,5,English & French,Mother,Byers-Heinlein,16,Bachelor's degree,mother
 00738_1_en,English (American),WG,00738_1,738,female,1,1y 0m 0d,365,12,0.64,0.36,0,NA,no,no information,no,2,86,9,186,0,42,144,9,English & French,Father,Byers-Heinlein,16,Bachelor's degree,mother
 00738_1_fr,French (Quebecois),WG,00738_1,738,female,1,1y 0m 0d,365,12,0.64,0.36,0,NA,no,no information,no,7,100,9,186,0,42,144,9,English & French,Father,Byers-Heinlein,16,Bachelor's degree,mother
-00739_1_en,English (American),WG,00739_1,739,male,1,11m 25d,359,11,0.2478,0.7523000000000001,0,NA,no,no,no,2,44,5,95,2,22,73,3,English & French,Mother,Byers-Heinlein,15,Some college/university,mother
-00739_1_fr,French (Quebecois),WG,00739_1,739,male,1,11m 25d,359,11,0.2478,0.7523000000000001,0,NA,no,no,no,3,51,5,95,2,22,73,3,English & French,Mother,Byers-Heinlein,15,Some college/university,mother
+00739_1_en,English (American),WG,00739_1,739,male,1,11m 25d,359,11,0.2478,0.7523,0,NA,no,no,no,2,44,5,95,2,22,73,3,English & French,Mother,Byers-Heinlein,15,Some college/university,mother
+00739_1_fr,French (Quebecois),WG,00739_1,739,male,1,11m 25d,359,11,0.2478,0.7523,0,NA,no,no,no,3,51,5,95,2,22,73,3,English & French,Mother,Byers-Heinlein,15,Some college/university,mother
 00739_2_en,English (American),WG,00739_2,739,male,2,1y 2m 24d,450,14,0.27,0.73,0,NA,no,no,no,4,34,13,80,3,20,60,10,English & French,Father,Byers-Heinlein,15,Some college/university,mother
 00739_2_fr,French (Quebecois),WG,00739_2,739,male,2,1y 2m 24d,450,14,0.27,0.73,0,NA,no,no,no,9,46,13,80,3,20,60,10,English & French,Father,Byers-Heinlein,15,Some college/university,mother
 00741_1_fr,French (Quebecois),WG,00741_1,741,female,1,1y 0m 20d,385,12,0,1,0,NA,no,no,no,13,199,13,199,0,0,199,13,French only,Mother,Byers-Heinlein,17,Graduate degree,mother
@@ -601,7 +601,7 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00743_1_en,English (American),WG,00743_1,743,male,1,11m 29d,363,11,0.41,0.24,0.36,Portuguese,yes,no,no,1,50,1,61,0,7,54,1,English & French,Mother,Byers-Heinlein,16,Bachelor's degree,mother
 00743_1_fr,French (Quebecois),WG,00743_1,743,male,1,11m 29d,363,11,0.41,0.24,0.36,Portuguese,yes,no,no,0,11,1,61,0,7,54,1,English & French,Mother,Byers-Heinlein,16,Bachelor's degree,mother
 00744_1_en,English (American),WG,00744_1,744,male,1,1y 1m 26d,421,13,0.3734,0.0268,0.5998,Spanish,no,no,no,0,8,0,8,0,0,8,0,English only,Mother,Byers-Heinlein,NA,Not reported,Not reported
-00745_1_en,English (American),WG,00745_1,745,female,1,1y 1m 25d,420,13,0.5532,0.1008,0.34600000000000003,"Spanish, Portuguese",no,no,no,8,230,8,230,0,0,230,8,English only,Mother,Byers-Heinlein,17,Graduate degree,mother
+00745_1_en,English (American),WG,00745_1,745,female,1,1y 1m 25d,420,13,0.5532,0.1008,0.346,"Spanish, Portuguese",no,no,no,8,230,8,230,0,0,230,8,English only,Mother,Byers-Heinlein,17,Graduate degree,mother
 00747_1_en,English (American),WG,00747_1,747,male,1,1y 0m 2d,367,12,0.19,0.81,0,NA,no,no,no,1,30,5,100,1,22,78,4,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
 00747_1_fr,French (Quebecois),WG,00747_1,747,male,1,1y 0m 2d,367,12,0.19,0.81,0,NA,no,no,no,4,70,5,100,1,22,78,4,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
 00749_1_en,English (American),WG,00749_1,749,male,1,1y 1m 5d,400,13,0.44,0.56,0,NA,no,no,no,8,85,12,161,3,42,119,9,English & French,Mother,Byers-Heinlein,15,Some college/university,mother
@@ -615,7 +615,7 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00756_1_en,English (American),WG,00756_1,756,male,1,11m 29d,363,11,0.5785,0,0.4215,Persian Farsi,no,no information,no,5,55,5,55,0,0,55,5,English only,Mother,Byers-Heinlein,21,Doctoral degree,mother
 00757_1_en,English (American),WG,00757_1,757,female,1,11m 25d,359,11,0.924,0.076,0,NA,no,no,no,4,47,4,47,0,0,47,4,English only,Mother,Byers-Heinlein,13,College certificate/diploma,mother
 00761_1_fr,French (Quebecois),WG,00761_1,761,male,1,9m 4d,277,9,0,1,0,NA,no,no,no,0,87,0,87,0,0,87,0,French only,Mother,Byers-Heinlein,13,College certificate/diploma,mother
-00762_1_en,English (American),WG,00762_1,762,female,1,1y 0m 21d,386,12,0.6224000000000001,0.1505,0.2272,Spanish,no,no,no,5,63,5,63,0,0,63,5,English only,Father,Byers-Heinlein,15,Some college/university,mother
+00762_1_en,English (American),WG,00762_1,762,female,1,1y 0m 21d,386,12,0.6224,0.1505,0.2272,Spanish,no,no,no,5,63,5,63,0,0,63,5,English only,Father,Byers-Heinlein,15,Some college/university,mother
 00764_1_en,English (American),WG,00764_1,764,female,1,10m 7d,311,10,0.3181,0.027,0.655,Mandarin,no,no,no,4,33,4,33,0,0,33,4,English only,Father,Byers-Heinlein,17,Graduate degree,mother
 00765_1_fr,French (Quebecois),WG,00765_1,765,male,1,11m 28d,362,11,0,1,0,NA,no,no,no,4,162,4,162,0,0,162,4,French only,Mother,Byers-Heinlein,15,Some college/university,mother
 00766_1_en,English (American),WG,00766_1,766,female,1,9m 4d,277,9,1,0,0,NA,no,no,no,0,2,0,2,0,0,2,0,English only,Mother,Byers-Heinlein,17,Graduate degree,mother
@@ -642,7 +642,7 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00795_1_fr,French (Quebecois),WG,00795_1,795,female,1,1y 2m 11d,437,14,0,0.26,0.74,Chinese,no,no,no,6,28,6,28,0,0,28,6,French only,Mother,Byers-Heinlein,18,Master's degree,mother
 00806_1_en,English (American),WG,00806_1,806,female,1,1y 2m 23d,449,14,0.79,0.21,0,NA,no,no,no,18,292,32,431,7,120,311,25,English & French,Mother,Byers-Heinlein,18,Master's degree,mother
 00806_1_fr,French (Quebecois),WG,00806_1,806,female,1,1y 2m 23d,449,14,0.79,0.21,0,NA,no,no,no,14,139,32,431,7,120,311,25,English & French,Mother,Byers-Heinlein,18,Master's degree,mother
-00808_1_en,English (American),WG,00808_1,808,male,1,1y 2m 10d,436,14,0.37200000000000005,0.0025,0.625,Ukranian,no,no,no,12,68,12,68,0,0,68,12,English only,Mother,Byers-Heinlein,15,Some college/university,mother
+00808_1_en,English (American),WG,00808_1,808,male,1,1y 2m 10d,436,14,0.372,0.0025,0.625,Ukranian,no,no,no,12,68,12,68,0,0,68,12,English only,Mother,Byers-Heinlein,15,Some college/university,mother
 00809_1_en,English (American),WG,00809_1,809,female,1,1y 2m 22d,448,14,0.275,0.725,0,NA,no,no,no,2,30,33,277,2,29,248,31,English & French,Mother & Father,Byers-Heinlein,17,Graduate degree,mother
 00809_1_fr,French (Quebecois),WG,00809_1,809,female,1,1y 2m 22d,448,14,0.275,0.725,0,NA,no,no,no,31,247,33,277,2,29,248,31,English & French,Not reported,Byers-Heinlein,17,Graduate degree,mother
 00810_1_fr,French (Quebecois),WG,00810_1,810,male,1,1y 2m 28d,454,14,0,0.3111,0.6889,Arabic,no,no,no,11,121,11,121,0,0,121,11,French only,Father,Byers-Heinlein,17,Graduate degree,mother
@@ -664,12 +664,12 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00832_1_fr,French (Quebecois),WG,00832_1,832,female,1,1y 0m 5d,370,12,0,1,0,NA,no,no,yes,0,47,0,47,0,0,47,0,French only,Not reported,Byers-Heinlein,16,Bachelor's degree,mother
 00833_1_en,English (American),WG,00833_1,833,male,1,9m 2d,275,9,0.55,0.45,0,NA,no,no,no,0,78,0,138,0,33,105,0,English & French,Mother,Byers-Heinlein,13,College certificate/diploma,mother
 00833_1_fr,French (Quebecois),WG,00833_1,833,male,1,9m 2d,275,9,0.55,0.45,0,NA,no,no,no,0,60,0,138,0,33,105,0,English & French,Mother,Byers-Heinlein,13,College certificate/diploma,mother
-00834_1_en,English (American),WG,00834_1,834,female,1,9m 16d,289,9,0.54,0.46,0,NA,no,no,no,0,22,0,102,0,17,85,0,English & French,Mother & Father,Byers-Heinlein,12,Trade school diploma,mother
-00834_1_fr,French (Quebecois),WG,00834_1,834,female,1,9m 16d,289,9,0.54,0.46,0,NA,no,no,no,0,80,0,102,0,17,85,0,English & French,Mother & Father,Byers-Heinlein,12,Trade school diploma,mother
-00834_2_en,English (American),WG,00834_2,834,female,2,1y 0m 8d,373,12,0.58,0.42,0,NA,no,no,no,3,102,4,221,0,80,141,4,English & French,Mother,Byers-Heinlein,12,Trade school diploma,mother
-00834_2_fr,French (Quebecois),WG,00834_2,834,female,2,1y 0m 8d,373,12,0.58,0.42,0,NA,no,no,no,1,119,4,221,0,80,141,4,English & French,Not reported,Byers-Heinlein,12,Trade school diploma,mother
-00834_3_en,English (American),WG,00834_3,834,female,3,1y 2m 17d,443,14,0.58,0.42,0,NA,no,no,no,1,203,1,466,0,155,311,1,English & French,Father,Byers-Heinlein,12,Trade school diploma,mother
-00834_3_fr,French (Quebecois),WG,00834_3,834,female,3,1y 2m 17d,443,14,0.58,0.42,0,NA,no,no,no,0,263,1,466,0,155,311,1,English & French,Not reported,Byers-Heinlein,12,Trade school diploma,mother
+00834_1_en,English (American),WG,00834_1,834,female,1,9m 16d,289,9,0.54,0.46,0,NA,no,no,no,0,22,0,102,0,17,85,0,English & French,Mother & Father,Byers-Heinlein,11,High school,mother
+00834_1_fr,French (Quebecois),WG,00834_1,834,female,1,9m 16d,289,9,0.54,0.46,0,NA,no,no,no,0,80,0,102,0,17,85,0,English & French,Mother & Father,Byers-Heinlein,11,High school,mother
+00834_2_en,English (American),WG,00834_2,834,female,2,1y 0m 8d,373,12,0.58,0.42,0,NA,no,no,no,3,102,4,221,0,80,141,4,English & French,Mother,Byers-Heinlein,11,High school,mother
+00834_2_fr,French (Quebecois),WG,00834_2,834,female,2,1y 0m 8d,373,12,0.58,0.42,0,NA,no,no,no,1,119,4,221,0,80,141,4,English & French,Not reported,Byers-Heinlein,11,High school,mother
+00834_3_en,English (American),WG,00834_3,834,female,3,1y 2m 17d,443,14,0.58,0.42,0,NA,no,no,no,1,203,1,466,0,155,311,1,English & French,Father,Byers-Heinlein,11,High school,mother
+00834_3_fr,French (Quebecois),WG,00834_3,834,female,3,1y 2m 17d,443,14,0.58,0.42,0,NA,no,no,no,0,263,1,466,0,155,311,1,English & French,Not reported,Byers-Heinlein,11,High school,mother
 00835_1_en,English (American),WG,00835_1,835,female,1,1y 0m 0d,365,12,0.76,0.24,0,NA,no,no,no,4,103,7,147,1,32,115,6,English & French,Not reported,Byers-Heinlein,17,Graduate degree,mother
 00835_1_fr,French (Quebecois),WG,00835_1,835,female,1,1y 0m 0d,365,12,0.76,0.24,0,NA,no,no,no,3,44,7,147,1,32,115,6,English & French,Not reported,Byers-Heinlein,17,Graduate degree,mother
 00836_1_en,English (American),WG,00836_1,836,female,1,9m 11d,284,9,0.71,0.23,0.07,"Tagalog, Swahili",no,no,no,2,87,2,101,0,9,92,2,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
@@ -721,12 +721,12 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 00919_2_en,English (American),WG,00919_2,919,female,2,1y 2m 14d,440,14,0.98,0.02,NA,NA,no,no,no,27,262,27,262,0,0,262,27,English & French,Not reported,Byers-Heinlein,17,Graduate degree,mother
 00919_2_fr,French (Quebecois),WG,00919_2,919,female,2,1y 2m 14d,440,14,0.98,0.02,NA,NA,no,no,no,0,0,27,262,0,0,262,27,English & French,Not reported,Byers-Heinlein,17,Graduate degree,mother
 00921_1_fr,French (Quebecois),WG,00921_1,921,male,1,9m 17d,290,9,0.11,0.84,0.06,German,no,no,no,0,52,0,52,0,0,52,0,French only,Not reported,Byers-Heinlein,18,Master's degree,mother
-00922_1_en,English (American),WG,00922_1,922,female,1,9m 25d,298,9,0.54,0.46,NA,NA,no,no,no,4,120,7,216,3,60,156,4,English & French,Mother,Byers-Heinlein,12,Trade school diploma,mother
-00922_1_fr,French (Quebecois),WG,00922_1,922,female,1,9m 25d,298,9,0.54,0.46,NA,NA,no,no,no,3,96,7,216,3,60,156,4,English & French,Not reported,Byers-Heinlein,12,Trade school diploma,mother
-00922_2_en,English (American),WG,00922_2,922,female,2,1y 0m 23d,388,12,0.74,0.26,NA,NA,no,no,no,11,148,17,227,6,56,171,11,English & French,Mother,Byers-Heinlein,12,Trade school diploma,mother
-00922_2_fr,French (Quebecois),WG,00922_2,922,female,2,1y 0m 23d,388,12,0.74,0.26,NA,NA,no,no,no,6,79,17,227,6,56,171,11,English & French,Not reported,Byers-Heinlein,12,Trade school diploma,mother
-00923_1_en,English (American),WG,00923_1,923,female,1,1y 1m 29d,424,13,0.27,0.72,0.01,CrÃ©ole,no,no,no,0,198,0,387,0,134,253,0,English & French,Mother,Byers-Heinlein,12,Trade school diploma,mother
-00923_1_fr,French (Quebecois),WG,00923_1,923,female,1,1y 1m 29d,424,13,0.27,0.72,0.01,CrÃ©ole,no,no,no,0,189,0,387,0,134,253,0,English & French,Not reported,Byers-Heinlein,12,Trade school diploma,mother
+00922_1_en,English (American),WG,00922_1,922,female,1,9m 25d,298,9,0.54,0.46,NA,NA,no,no,no,4,120,7,216,3,60,156,4,English & French,Mother,Byers-Heinlein,11,High school,mother
+00922_1_fr,French (Quebecois),WG,00922_1,922,female,1,9m 25d,298,9,0.54,0.46,NA,NA,no,no,no,3,96,7,216,3,60,156,4,English & French,Not reported,Byers-Heinlein,11,High school,mother
+00922_2_en,English (American),WG,00922_2,922,female,2,1y 0m 23d,388,12,0.74,0.26,NA,NA,no,no,no,11,148,17,227,6,56,171,11,English & French,Mother,Byers-Heinlein,11,High school,mother
+00922_2_fr,French (Quebecois),WG,00922_2,922,female,2,1y 0m 23d,388,12,0.74,0.26,NA,NA,no,no,no,6,79,17,227,6,56,171,11,English & French,Not reported,Byers-Heinlein,11,High school,mother
+00923_1_en,English (American),WG,00923_1,923,female,1,1y 1m 29d,424,13,0.27,0.72,0.01,CrÃ©ole,no,no,no,0,198,0,387,0,134,253,0,English & French,Mother,Byers-Heinlein,11,High school,mother
+00923_1_fr,French (Quebecois),WG,00923_1,923,female,1,1y 1m 29d,424,13,0.27,0.72,0.01,CrÃ©ole,no,no,no,0,189,0,387,0,134,253,0,English & French,Not reported,Byers-Heinlein,11,High school,mother
 00925_1_en,English (American),WG,00925_1,925,male,1,1y 0m 10d,375,12,0.1,0.85,0.06,NA,no,no,no,0,44,2,160,0,31,129,2,English & French,Mother,Byers-Heinlein,17,Graduate degree,mother
 00925_1_fr,French (Quebecois),WG,00925_1,925,male,1,1y 0m 10d,375,12,0.1,0.85,0.06,NA,no,no,no,2,116,2,160,0,31,129,2,English & French,Not reported,Byers-Heinlein,17,Graduate degree,mother
 00926_1_en,English (American),WG,00926_1,926,female,1,1y 0m 12d,377,12,0.23,0,0.77,NA,no,no,no,9,79,9,79,0,0,79,9,English only,Not reported,Byers-Heinlein,18,Master's degree,mother
@@ -1125,7 +1125,7 @@ form_id,form_language,form,visit_id,child_id,sex,lab_visit_num,child_age,child_a
 01334_1_fr,French (Quebecois),WG,01334_1,1334,male,1,10m 20d,324,10,0.53,0.47,NA,NA,no,no,no,13,33,21,74,6,23,51,15,English & French,Not reported,Byers-Heinlein,18,Master's degree,mother
 01334_2_en,English (American),WG,01334_2,1334,male,2,1y 0m 10d,375,12,0.54,0.46,0,NA,no,no,no,26,83,47,150,16,52,98,31,English & French,Mother,Byers-Heinlein,18,Master's degree,mother
 01334_2_fr,French (Quebecois),WG,01334_2,1334,male,2,1y 0m 10d,375,12,0.54,0.46,0,NA,no,no,no,21,67,47,150,16,52,98,31,English & French,Not reported,Byers-Heinlein,18,Master's degree,mother
-01337_1_en,English (American),WG,01337_1,1337,female,1,1y 1m 29d,424,13,0.28,0,0.72,"Swedish , Greek",no,no,no,1,12,1,12,0,0,12,1,English only,Mother,Byers-Heinlein,18,Master's degree,mother
+01337_1_en,English (American),WG,01337_1,1337,female,1,1y 1m 29d,424,13,0.28,0,0.72,"Swedish , Greek ",no,no,no,1,12,1,12,0,0,12,1,English only,Mother,Byers-Heinlein,18,Master's degree,mother
 01338_1_en,English (American),WG,01338_1,1338,female,1,10m 7d,311,10,0.325,0.635,0.04,NA,no,no,no information,0,14,0,54,0,11,43,0,English & French,Mother,Byers-Heinlein,18,Master's degree,mother
 01338_1_fr,French (Quebecois),WG,01338_1,1338,female,1,10m 7d,311,10,0.325,0.635,0.04,NA,no,no,no information,0,40,0,54,0,11,43,0,English & French,Not reported,Byers-Heinlein,18,Master's degree,mother
 01340_1_en,English (American),WG,01340_1,1340,male,1,9m 18d,291,9,0.04,0.03,0.92,Spanish,no,no,no,0,17,0,17,0,0,17,0,English only,Mother,Byers-Heinlein,17,Graduate degree,mother
