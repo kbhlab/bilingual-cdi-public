@@ -287,7 +287,7 @@ cdi %>%
   group_by(lang_group) %>%
   summarize(av_yrs_edu = mean(years_education, na.rm = TRUE)) 
 
- #highest edu level, 3 mothers of monolinguals have high school, everyone else has at least some postsecondary
+ #highest edu level, 4 mothers of monolinguals and 10 mothers of bilinguals have high school, everyone else has at least some postsecondary
 cdi %>%
   distinct(visit_id, highest_edu_desc, edu_parent, lang_group) %>%
   count(highest_edu_desc, edu_parent, lang_group) 
